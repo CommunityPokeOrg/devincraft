@@ -1,0 +1,221 @@
+Wed Nov 18 14:34:15 UTC 2026
+{
+  "state": "spawned",
+  "username": "ermsies",
+  "version": "1.21.1",
+  "gameMode": "survival",
+  "position": {
+    "x": 3.327378306794203,
+    "y": 85,
+    "z": 10.300052166677418
+  },
+  "health": 20,
+  "food": 20,
+  "action": null,
+  "chatHandler": {
+    "received": 98,
+    "ignoredSelf": 98,
+    "addressed": 0,
+    "responded": 0,
+    "queued": 0,
+    "failures": 0
+  },
+  "autonomous": {
+    "enabled": true,
+    "behavior": {
+      "type": "wander",
+      "target": {
+        "x": -2,
+        "y": 85,
+        "z": 10
+      }
+    }
+  },
+  "heldItem": null,
+  "inventory": [],
+  "players": [],
+  "nearbyEntities": [
+    {
+      "id": 33023,
+      "name": "frog",
+      "type": "animal",
+      "position": {
+        "x": 16.498396452948636,
+        "y": 72.0625,
+        "z": 2.361016068395867
+      }
+    },
+    {
+      "id": 79271,
+      "name": "zombie",
+      "type": "hostile",
+      "position": {
+        "x": -9.21049114749115,
+        "y": 62,
+        "z": 1.474427745895138
+      }
+    },
+    {
+      "id": 78357,
+      "name": "zombie",
+      "type": "hostile",
+      "position": {
+        "x": -18.71172928273736,
+        "y": 73,
+        "z": 27.22504260674622
+      }
+    }
+  ],
+  "dimension": "overworld"
+}
+
+[2026-11-18T14:29:33.655Z] Idle behavior: idle
+[2026-11-18T14:29:35.666Z] Idle behavior: seek_vine_descent {"x":7,"y":84,"z":11}
+[2026-11-18T14:29:39.655Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 84, 11); replanning
+[2026-11-18T14:29:39.655Z] Idle behavior: idle
+[2026-11-18T14:29:41.667Z] Idle behavior: seek_vine_descent {"x":7,"y":83,"z":10}
+[2026-11-18T14:29:45.654Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 83, 10); replanning
+[2026-11-18T14:29:45.654Z] Idle behavior: idle
+[2026-11-18T14:29:47.667Z] Idle behavior: seek_vine_descent {"x":7,"y":85,"z":12}
+[2026-11-18T14:29:51.656Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 85, 12); replanning
+[2026-11-18T14:29:51.657Z] Idle behavior: idle
+[2026-11-18T14:29:54.169Z] Idle behavior: wander {"x":9,"y":84,"z":9}
+[2026-11-18T14:29:58.166Z] Movement stalled: wander at (3, 85, 10) target=(9, 84, 9); replanning
+[2026-11-18T14:29:58.166Z] Idle behavior: idle
+[2026-11-18T14:30:01.669Z] Idle behavior: wander {"x":-1,"y":85,"z":17}
+[2026-11-18T14:30:05.665Z] Movement stalled: wander at (3, 85, 10) target=(-1, 85, 17); replanning
+[2026-11-18T14:30:05.675Z] Idle behavior: idle
+[2026-11-18T14:30:09.168Z] Idle behavior: wander {"x":10,"y":84,"z":11}
+[2026-11-18T14:30:10.597Z] Connection health: protocol=play lastPacket=41ms lastKeepalive=41ms maxEventLoopDelay=175ms
+[2026-11-18T14:30:13.165Z] Movement stalled: wander at (3, 85, 10) target=(10, 84, 11); replanning
+[2026-11-18T14:30:13.165Z] Idle behavior: idle
+[2026-11-18T14:30:16.212Z] Idle behavior: gather_gear {"x":-9,"y":90,"z":1}
+[2026-11-18T14:30:21.667Z] Movement stalled: gather_gear at (3, 90, 10) target=(-9, 90, 1); replanning
+[2026-11-18T14:30:21.667Z] Idle behavior: idle
+[2026-11-18T14:30:21.667Z] Gear target timed out: jungle_log reachable=false visible=true
+[2026-11-18T14:30:23.666Z] Idle behavior: seek_vine_descent {"x":5,"y":84,"z":12}
+[2026-11-18T14:30:27.656Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(5, 84, 12); replanning
+[2026-11-18T14:30:27.656Z] Idle behavior: idle
+[2026-11-18T14:30:29.667Z] Idle behavior: seek_vine_descent {"x":7,"y":84,"z":11}
+[2026-11-18T14:30:33.156Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 84, 11); replanning
+[2026-11-18T14:30:33.157Z] Idle behavior: idle
+[2026-11-18T14:30:35.166Z] Idle behavior: seek_vine_descent {"x":7,"y":83,"z":10}
+[2026-11-18T14:30:38.657Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 83, 10); replanning
+[2026-11-18T14:30:38.657Z] Idle behavior: idle
+[2026-11-18T14:30:40.171Z] Idle behavior: seek_vine_descent {"x":7,"y":85,"z":12}
+[2026-11-18T14:30:43.662Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 85, 12); replanning
+[2026-11-18T14:30:43.662Z] Idle behavior: idle
+[2026-11-18T14:30:45.678Z] Idle behavior: wander {"x":8,"y":84,"z":10}
+[2026-11-18T14:30:49.176Z] Movement stalled: wander at (3, 85, 10) target=(8, 84, 10); replanning
+[2026-11-18T14:30:49.176Z] Idle behavior: idle
+[2026-11-18T14:30:52.680Z] Idle behavior: wander {"x":-5,"y":85,"z":6}
+[2026-11-18T14:30:56.180Z] Movement stalled: wander at (3, 85, 10) target=(-5, 85, 6); replanning
+[2026-11-18T14:30:56.180Z] Idle behavior: idle
+[2026-11-18T14:31:00.184Z] Idle behavior: wander {"x":-5,"y":86,"z":9}
+[2026-11-18T14:31:03.682Z] Movement stalled: wander at (3, 85, 10) target=(-5, 86, 9); replanning
+[2026-11-18T14:31:03.682Z] Idle behavior: idle
+[2026-11-18T14:31:06.715Z] Idle behavior: gather_gear {"x":-9,"y":90,"z":1}
+[2026-11-18T14:31:10.598Z] Connection health: protocol=play lastPacket=34ms lastKeepalive=594ms maxEventLoopDelay=196ms
+[2026-11-18T14:31:12.203Z] Movement stalled: gather_gear at (3, 90, 10) target=(-9, 90, 1); replanning
+[2026-11-18T14:31:12.203Z] Gear target timed out: jungle_log reachable=false visible=true
+[2026-11-18T14:31:12.203Z] Idle behavior: idle
+[2026-11-18T14:31:14.192Z] Idle behavior: seek_vine_descent {"x":5,"y":84,"z":12}
+[2026-11-18T14:31:18.180Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(5, 84, 12); replanning
+[2026-11-18T14:31:18.180Z] Idle behavior: idle
+[2026-11-18T14:31:19.692Z] Idle behavior: seek_vine_descent {"x":7,"y":84,"z":11}
+[2026-11-18T14:31:23.184Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 84, 11); replanning
+[2026-11-18T14:31:23.184Z] Idle behavior: idle
+[2026-11-18T14:31:24.695Z] Idle behavior: seek_vine_descent {"x":7,"y":83,"z":10}
+[2026-11-18T14:31:28.186Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 83, 10); replanning
+[2026-11-18T14:31:28.186Z] Idle behavior: idle
+[2026-11-18T14:31:29.697Z] Idle behavior: seek_vine_descent {"x":7,"y":85,"z":12}
+[2026-11-18T14:31:33.188Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 85, 12); replanning
+[2026-11-18T14:31:33.189Z] Idle behavior: idle
+[2026-11-18T14:31:35.702Z] Idle behavior: wander {"x":9,"y":85,"z":13}
+[2026-11-18T14:31:39.698Z] Movement stalled: wander at (3, 85, 10) target=(9, 85, 13); replanning
+[2026-11-18T14:31:39.698Z] Idle behavior: idle
+[2026-11-18T14:31:43.706Z] Idle behavior: wander {"x":-3,"y":86,"z":9}
+[2026-11-18T14:31:47.233Z] Movement stalled: wander at (3, 85, 10) target=(-3, 86, 9); replanning
+[2026-11-18T14:31:47.233Z] Idle behavior: idle
+[2026-11-18T14:31:47.707Z] Idle behavior: wander {"x":3,"y":86,"z":16}
+[2026-11-18T14:31:51.208Z] Movement stalled: wander at (3, 85, 10) target=(3, 86, 16); replanning
+[2026-11-18T14:31:51.208Z] Idle behavior: idle
+[2026-11-18T14:31:54.717Z] Idle behavior: wander {"x":8,"y":85,"z":12}
+[2026-11-18T14:31:57.780Z] Idle behavior: gather_gear {"x":-9,"y":90,"z":1}
+[2026-11-18T14:31:57.780Z] Idle behavior: idle
+[2026-11-18T14:32:03.716Z] Movement stalled: gather_gear at (3, 91, 10) target=(-9, 90, 1); replanning
+[2026-11-18T14:32:03.716Z] Idle behavior: idle
+[2026-11-18T14:32:03.716Z] Gear target timed out: jungle_log reachable=false visible=true
+[2026-11-18T14:32:05.716Z] Idle behavior: seek_vine_descent {"x":5,"y":84,"z":12}
+[2026-11-18T14:32:09.206Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(5, 84, 12); replanning
+[2026-11-18T14:32:09.206Z] Idle behavior: idle
+[2026-11-18T14:32:10.598Z] Connection health: protocol=play lastPacket=44ms lastKeepalive=994ms maxEventLoopDelay=160ms
+[2026-11-18T14:32:11.218Z] Idle behavior: seek_vine_descent {"x":7,"y":84,"z":11}
+[2026-11-18T14:32:14.711Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 84, 11); replanning
+[2026-11-18T14:32:14.711Z] Idle behavior: idle
+[2026-11-18T14:32:16.723Z] Idle behavior: seek_vine_descent {"x":7,"y":83,"z":10}
+[2026-11-18T14:32:20.213Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 83, 10); replanning
+[2026-11-18T14:32:20.213Z] Idle behavior: idle
+[2026-11-18T14:32:22.226Z] Idle behavior: seek_vine_descent {"x":7,"y":85,"z":12}
+[2026-11-18T14:32:25.715Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 85, 12); replanning
+[2026-11-18T14:32:25.715Z] Idle behavior: idle
+[2026-11-18T14:32:27.727Z] Idle behavior: wander {"x":-5,"y":85,"z":6}
+[2026-11-18T14:32:31.224Z] Movement stalled: wander at (3, 85, 10) target=(-5, 85, 6); replanning
+[2026-11-18T14:32:31.224Z] Idle behavior: idle
+[2026-11-18T14:32:34.730Z] Idle behavior: wander {"x":7,"y":84,"z":9}
+[2026-11-18T14:32:38.227Z] Idle behavior: idle
+[2026-11-18T14:32:38.227Z] Movement stalled: wander at (3, 85, 10) target=(7, 84, 9); replanning
+[2026-11-18T14:32:41.735Z] Idle behavior: wander {"x":3,"y":86,"z":5}
+[2026-11-18T14:32:45.233Z] Movement stalled: wander at (3, 85, 10) target=(3, 86, 5); replanning
+[2026-11-18T14:32:45.233Z] Idle behavior: idle
+[2026-11-18T14:32:48.739Z] Idle behavior: wander {"x":10,"y":84,"z":9}
+[2026-11-18T14:32:49.805Z] Idle behavior: idle
+[2026-11-18T14:32:49.805Z] Idle behavior: gather_gear {"x":-9,"y":90,"z":1}
+[2026-11-18T14:32:56.239Z] Movement stalled: gather_gear at (3, 90, 10) target=(-9, 90, 1); replanning
+[2026-11-18T14:32:56.239Z] Idle behavior: idle
+[2026-11-18T14:32:56.239Z] Gear target timed out: jungle_log reachable=false visible=true
+[2026-11-18T14:32:58.240Z] Idle behavior: seek_vine_descent {"x":5,"y":84,"z":12}
+[2026-11-18T14:33:01.730Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(5, 84, 12); replanning
+[2026-11-18T14:33:01.730Z] Idle behavior: idle
+[2026-11-18T14:33:03.242Z] Idle behavior: seek_vine_descent {"x":7,"y":84,"z":11}
+[2026-11-18T14:33:06.732Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 84, 11); replanning
+[2026-11-18T14:33:06.732Z] Idle behavior: idle
+[2026-11-18T14:33:08.244Z] Idle behavior: seek_vine_descent {"x":7,"y":83,"z":10}
+[2026-11-18T14:33:10.599Z] Connection health: protocol=play lastPacket=44ms lastKeepalive=344ms maxEventLoopDelay=178ms
+[2026-11-18T14:33:11.734Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 83, 10); replanning
+[2026-11-18T14:33:11.734Z] Idle behavior: idle
+[2026-11-18T14:33:13.247Z] Idle behavior: seek_vine_descent {"x":7,"y":85,"z":12}
+[2026-11-18T14:33:16.738Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 85, 12); replanning
+[2026-11-18T14:33:16.738Z] Idle behavior: idle
+[2026-11-18T14:33:18.751Z] Idle behavior: wander {"x":2,"y":85,"z":17}
+[2026-11-18T14:33:22.750Z] Movement stalled: wander at (3, 85, 10) target=(2, 85, 17); replanning
+[2026-11-18T14:33:22.760Z] Idle behavior: idle
+[2026-11-18T14:33:27.253Z] Idle behavior: wander {"x":-2,"y":86,"z":9}
+[2026-11-18T14:33:30.780Z] Movement stalled: wander at (3, 85, 10) target=(-2, 86, 9); replanning
+[2026-11-18T14:33:30.780Z] Idle behavior: idle
+[2026-11-18T14:33:31.255Z] Idle behavior: wander {"x":-3,"y":86,"z":16}
+[2026-11-18T14:33:35.251Z] Movement stalled: wander at (3, 85, 10) target=(-3, 86, 16); replanning
+[2026-11-18T14:33:35.251Z] Idle behavior: idle
+[2026-11-18T14:33:38.756Z] Idle behavior: wander {"x":-5,"y":85,"z":6}
+[2026-11-18T14:33:41.785Z] Idle behavior: idle
+[2026-11-18T14:33:41.785Z] Idle behavior: gather_gear {"x":-9,"y":90,"z":1}
+[2026-11-18T14:33:47.259Z] Movement stalled: gather_gear at (3, 90, 10) target=(-9, 90, 1); replanning
+[2026-11-18T14:33:47.259Z] Gear target timed out: jungle_log reachable=false visible=true
+[2026-11-18T14:33:47.259Z] Idle behavior: idle
+[2026-11-18T14:33:49.260Z] Idle behavior: seek_vine_descent {"x":5,"y":84,"z":12}
+[2026-11-18T14:33:52.749Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(5, 84, 12); replanning
+[2026-11-18T14:33:52.749Z] Idle behavior: idle
+[2026-11-18T14:33:54.761Z] Idle behavior: seek_vine_descent {"x":7,"y":84,"z":11}
+[2026-11-18T14:33:58.249Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 84, 11); replanning
+[2026-11-18T14:33:58.249Z] Idle behavior: idle
+[2026-11-18T14:33:59.771Z] Idle behavior: seek_vine_descent {"x":7,"y":83,"z":10}
+[2026-11-18T14:34:03.254Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 83, 10); replanning
+[2026-11-18T14:34:03.254Z] Idle behavior: idle
+[2026-11-18T14:34:05.266Z] Idle behavior: seek_vine_descent {"x":7,"y":85,"z":12}
+[2026-11-18T14:34:08.755Z] Movement stalled: seek_vine_descent at (3, 85, 10) target=(7, 85, 12); replanning
+[2026-11-18T14:34:08.755Z] Idle behavior: idle
+[2026-11-18T14:34:10.598Z] Connection health: protocol=play lastPacket=43ms lastKeepalive=643ms maxEventLoopDelay=178ms
+[2026-11-18T14:34:10.766Z] Idle behavior: wander {"x":2,"y":85,"z":17}
+[2026-11-18T14:34:14.324Z] Movement stalled: wander at (3, 85, 10) target=(2, 85, 17); replanning
+[2026-11-18T14:34:14.324Z] Idle behavior: idle
+[2026-11-18T14:34:14.773Z] Idle behavior: wander {"x":-2,"y":85,"z":10}
