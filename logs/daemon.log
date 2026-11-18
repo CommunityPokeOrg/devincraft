@@ -1,0 +1,320 @@
+[2026-11-18T06:00:14.441Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:00:14.961Z] Microsoft device login is awaiting approval.
+[2026-11-18T06:12:25.935Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:15:01.151Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:21:51.567Z] Connection/authentication error: Error
+[2026-11-18T06:22:21.573Z] Disconnected: keepAliveError
+[2026-11-18T06:22:21.573Z] Reconnecting in 5s (attempt 1/8).
+[2026-11-18T06:22:26.574Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:22:27.087Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:22:28.519Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:24:23.900Z] Disconnected: disconnect.quitting
+[2026-11-18T06:24:25.024Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:24:25.616Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:24:26.916Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:26:39.787Z] Disconnected: disconnect.quitting
+[2026-11-18T06:26:40.913Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:26:41.646Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:26:43.014Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:28:40.518Z] Disconnected: disconnect.quitting
+[2026-11-18T06:28:40.519Z] Connection diagnostics: protocol=play lastPacket=2ms lastKeepalive=704ms maxEventLoopDelay=58ms
+[2026-11-18T06:28:41.851Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:28:42.287Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:28:43.604Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:29:43.603Z] Connection health: protocol=play lastPacket=37ms lastKeepalive=37ms maxEventLoopDelay=56ms
+[2026-11-18T06:30:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=438ms maxEventLoopDelay=18ms
+[2026-11-18T06:31:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=688ms maxEventLoopDelay=18ms
+[2026-11-18T06:32:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=988ms maxEventLoopDelay=15ms
+[2026-11-18T06:33:43.604Z] Connection health: protocol=play lastPacket=39ms lastKeepalive=388ms maxEventLoopDelay=31ms
+[2026-11-18T06:34:43.603Z] Connection health: protocol=play lastPacket=37ms lastKeepalive=737ms maxEventLoopDelay=16ms
+[2026-11-18T06:35:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=88ms maxEventLoopDelay=16ms
+[2026-11-18T06:36:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=537ms maxEventLoopDelay=20ms
+[2026-11-18T06:37:43.605Z] Connection health: protocol=play lastPacket=39ms lastKeepalive=739ms maxEventLoopDelay=20ms
+[2026-11-18T06:38:43.604Z] Connection health: protocol=play lastPacket=36ms lastKeepalive=137ms maxEventLoopDelay=14ms
+[2026-11-18T06:42:34.096Z] Connection health: protocol=play lastPacket=174180ms lastKeepalive=175080ms maxEventLoopDelay=174215ms
+[2026-11-18T06:42:34.118Z] Minecraft keepalive: client timed out after 60000 milliseconds; closing the unresponsive socket.
+[2026-11-18T06:42:34.125Z] Disconnected: keepAliveError
+[2026-11-18T06:42:34.125Z] Connection diagnostics: protocol=play lastPacket=174209ms lastKeepalive=175109ms maxEventLoopDelay=0ms
+[2026-11-18T06:42:34.125Z] Reconnecting in 5.763s (attempt 1).
+[2026-11-18T06:42:39.889Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:42:40.644Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:42:42.026Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:43:42.025Z] Connection health: protocol=play lastPacket=9ms lastKeepalive=9ms maxEventLoopDelay=27ms
+[2026-11-18T06:44:42.027Z] Connection health: protocol=play lastPacket=10ms lastKeepalive=509ms maxEventLoopDelay=32ms
+[2026-11-18T06:45:42.026Z] Connection health: protocol=play lastPacket=14ms lastKeepalive=764ms maxEventLoopDelay=19ms
+[2026-11-18T06:46:42.027Z] Connection health: protocol=play lastPacket=10ms lastKeepalive=1010ms maxEventLoopDelay=19ms
+[2026-11-18T06:47:42.026Z] Connection health: protocol=play lastPacket=9ms lastKeepalive=309ms maxEventLoopDelay=29ms
+[2026-11-18T06:48:42.027Z] Connection health: protocol=play lastPacket=26356ms lastKeepalive=27259ms maxEventLoopDelay=13237ms
+[2026-11-18T06:49:14.771Z] Minecraft keepalive: client timed out after 60000 milliseconds; closing the unresponsive socket.
+[2026-11-18T06:49:14.773Z] Disconnected: keepAliveError
+[2026-11-18T06:49:14.773Z] Connection diagnostics: protocol=play lastPacket=59102ms lastKeepalive=60006ms maxEventLoopDelay=19ms
+[2026-11-18T06:49:14.773Z] Reconnecting in 5.235s (attempt 1).
+[2026-11-18T06:49:20.007Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:49:20.395Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:49:21.758Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:50:21.757Z] Connection health: protocol=play lastPacket=41ms lastKeepalive=790ms maxEventLoopDelay=24ms
+[2026-11-18T06:50:54.031Z] Disconnected: disconnect.quitting
+[2026-11-18T06:50:54.031Z] Connection diagnostics: protocol=play lastPacket=13ms lastKeepalive=164ms maxEventLoopDelay=20ms
+[2026-11-18T06:50:54.297Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:50:54.806Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:50:56.106Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:50:59.302Z] Idle behavior: wander {"x":36,"y":59,"z":-9}
+[2026-11-18T06:51:12.304Z] Idle behavior: idle
+[2026-11-18T06:51:15.308Z] Idle behavior: wander {"x":45,"y":57,"z":-6}
+[2026-11-18T06:51:28.309Z] Idle behavior: idle
+[2026-11-18T06:51:33.312Z] Idle behavior: wander {"x":45,"y":57,"z":-6}
+[2026-11-18T06:51:47.312Z] Idle behavior: idle
+[2026-11-18T06:51:56.106Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=938ms maxEventLoopDelay=54ms
+[2026-11-18T06:51:57.316Z] Idle behavior: wander {"x":44,"y":57,"z":-6}
+[2026-11-18T06:52:10.317Z] Idle behavior: idle
+[2026-11-18T06:52:13.319Z] Idle behavior: wander {"x":39,"y":59,"z":-8}
+[2026-11-18T06:52:26.321Z] Idle behavior: idle
+[2026-11-18T06:52:30.326Z] Idle behavior: wander {"x":43,"y":57,"z":-6}
+[2026-11-18T06:52:35.195Z] Idle behavior: idle
+[2026-11-18T06:52:35.276Z] Disconnected: disconnect.quitting
+[2026-11-18T06:52:35.276Z] Connection diagnostics: protocol=play lastPacket=10ms lastKeepalive=909ms maxEventLoopDelay=18ms
+[2026-11-18T06:52:35.529Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:52:36.048Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:52:37.362Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:52:40.530Z] Idle behavior: wander {"x":43,"y":57,"z":-6}
+[2026-11-18T06:52:48.617Z] Idle behavior: idle
+[2026-11-18T06:52:50.534Z] Idle behavior: wander {"x":31,"y":58,"z":-13}
+[2026-11-18T06:53:03.535Z] Idle behavior: idle
+[2026-11-18T06:53:06.541Z] Idle behavior: wander {"x":42,"y":57,"z":-6}
+[2026-11-18T06:53:20.537Z] Idle behavior: idle
+[2026-11-18T06:53:23.545Z] Idle behavior: wander {"x":44,"y":57,"z":-6}
+[2026-11-18T06:53:37.363Z] Connection health: protocol=play lastPacket=46ms lastKeepalive=796ms maxEventLoopDelay=54ms
+[2026-11-18T06:53:37.540Z] Idle behavior: idle
+[2026-11-18T06:53:40.543Z] Idle behavior: wander {"x":39,"y":58,"z":-7}
+[2026-11-18T06:53:54.543Z] Idle behavior: idle
+[2026-11-18T06:53:59.546Z] Idle behavior: wander {"x":43,"y":57,"z":-6}
+[2026-11-18T06:54:13.546Z] Idle behavior: idle
+[2026-11-18T06:54:17.549Z] Idle behavior: wander {"x":31,"y":58,"z":-13}
+[2026-11-18T06:54:31.548Z] Idle behavior: idle
+[2026-11-18T06:54:34.550Z] Idle behavior: wander {"x":40,"y":59,"z":-20}
+[2026-11-18T06:54:37.363Z] Connection health: protocol=play lastPacket=45ms lastKeepalive=997ms maxEventLoopDelay=21ms
+[2026-11-18T06:54:48.550Z] Idle behavior: idle
+[2026-11-18T06:54:53.554Z] Idle behavior: wander {"x":39,"y":58,"z":-7}
+[2026-11-18T06:55:07.552Z] Idle behavior: idle
+[2026-11-18T06:55:10.557Z] Idle behavior: wander {"x":36,"y":59,"z":-9}
+[2026-11-18T06:55:24.554Z] Idle behavior: idle
+[2026-11-18T06:55:29.557Z] Idle behavior: wander {"x":39,"y":59,"z":-8}
+[2026-11-18T06:55:37.362Z] Connection health: protocol=play lastPacket=47ms lastKeepalive=296ms maxEventLoopDelay=20ms
+[2026-11-18T06:55:43.555Z] Idle behavior: idle
+[2026-11-18T06:55:46.557Z] Idle behavior: wander {"x":43,"y":57,"z":-5}
+[2026-11-18T06:55:59.559Z] Idle behavior: idle
+[2026-11-18T06:56:02.562Z] Idle behavior: wander {"x":36,"y":59,"z":-9}
+[2026-11-18T06:56:16.558Z] Idle behavior: idle
+[2026-11-18T06:56:19.561Z] Idle behavior: wander {"x":40,"y":59,"z":-20}
+[2026-11-18T06:56:32.563Z] Idle behavior: idle
+[2026-11-18T06:56:36.566Z] Idle behavior: wander {"x":36,"y":59,"z":-9}
+[2026-11-18T06:56:37.362Z] Connection health: protocol=play lastPacket=39ms lastKeepalive=746ms maxEventLoopDelay=25ms
+[2026-11-18T06:56:49.567Z] Idle behavior: idle
+[2026-11-18T06:56:52.569Z] Idle behavior: wander {"x":29,"y":58,"z":-5}
+[2026-11-18T06:57:05.572Z] Idle behavior: idle
+[2026-11-18T06:57:09.575Z] Idle behavior: wander {"x":29,"y":58,"z":-5}
+[2026-11-18T06:57:22.575Z] Idle behavior: idle
+[2026-11-18T06:57:25.578Z] Idle behavior: wander {"x":40,"y":58,"z":-6}
+[2026-11-18T06:57:37.362Z] Connection health: protocol=play lastPacket=46ms lastKeepalive=896ms maxEventLoopDelay=22ms
+[2026-11-18T06:57:38.582Z] Idle behavior: idle
+[2026-11-18T06:57:45.590Z] Idle behavior: wander {"x":39,"y":58,"z":-7}
+[2026-11-18T06:57:58.590Z] Idle behavior: idle
+[2026-11-18T06:58:01.594Z] Idle behavior: wander {"x":39,"y":58,"z":-6}
+[2026-11-18T06:58:14.596Z] Idle behavior: idle
+[2026-11-18T06:58:18.599Z] Idle behavior: wander {"x":41,"y":57,"z":-6}
+[2026-11-18T06:58:31.600Z] Idle behavior: idle
+[2026-11-18T06:58:34.604Z] Idle behavior: wander {"x":43,"y":57,"z":-5}
+[2026-11-18T06:58:37.363Z] Connection health: protocol=play lastPacket=47ms lastKeepalive=47ms maxEventLoopDelay=23ms
+[2026-11-18T06:58:47.606Z] Idle behavior: idle
+[2026-11-18T06:58:50.609Z] Idle behavior: wander {"x":40,"y":58,"z":-6}
+[2026-11-18T06:59:03.611Z] Idle behavior: idle
+[2026-11-18T06:59:06.614Z] Idle behavior: wander {"x":31,"y":58,"z":-13}
+[2026-11-18T06:59:20.613Z] Idle behavior: idle
+[2026-11-18T06:59:25.617Z] Idle behavior: wander {"x":31,"y":58,"z":-13}
+[2026-11-18T06:59:37.364Z] Connection health: protocol=play lastPacket=48ms lastKeepalive=198ms maxEventLoopDelay=29ms
+[2026-11-18T06:59:38.625Z] Idle behavior: idle
+[2026-11-18T06:59:42.630Z] Idle behavior: wander {"x":39,"y":58,"z":-6}
+[2026-11-18T06:59:56.628Z] Idle behavior: idle
+[2026-11-18T06:59:59.633Z] Idle behavior: wander {"x":43,"y":57,"z":-6}
+[2026-11-18T07:00:13.633Z] Idle behavior: idle
+[2026-11-18T07:00:17.636Z] Idle behavior: wander {"x":39,"y":58,"z":-6}
+[2026-11-18T07:00:31.636Z] Idle behavior: idle
+[2026-11-18T07:00:37.365Z] Connection health: protocol=play lastPacket=48ms lastKeepalive=799ms maxEventLoopDelay=36ms
+[2026-11-18T07:00:37.639Z] Idle behavior: wander {"x":38,"y":57,"z":-15}
+[2026-11-18T07:00:51.638Z] Idle behavior: idle
+[2026-11-18T07:00:54.641Z] Idle behavior: wander {"x":42,"y":57,"z":-6}
+[2026-11-18T07:01:08.642Z] Idle behavior: idle
+[2026-11-18T07:01:12.646Z] Idle behavior: wander {"x":43,"y":57,"z":-5}
+[2026-11-18T07:01:26.644Z] Idle behavior: idle
+[2026-11-18T07:01:29.647Z] Idle behavior: wander {"x":40,"y":59,"z":-20}
+[2026-11-18T07:01:37.365Z] Connection health: protocol=play lastPacket=48ms lastKeepalive=99ms maxEventLoopDelay=20ms
+[2026-11-18T07:01:42.647Z] Idle behavior: idle
+[2026-11-18T07:01:45.650Z] Idle behavior: wander {"x":44,"y":57,"z":-6}
+[2026-11-18T07:01:59.649Z] Idle behavior: idle
+[2026-11-18T07:02:02.652Z] Idle behavior: wander {"x":40,"y":59,"z":-20}
+[2026-11-18T07:02:15.660Z] Idle behavior: idle
+[2026-11-18T07:02:20.666Z] Idle behavior: wander {"x":43,"y":57,"z":-5}
+[2026-11-18T07:02:34.666Z] Idle behavior: idle
+[2026-11-18T07:02:37.364Z] Connection health: protocol=play lastPacket=48ms lastKeepalive=597ms maxEventLoopDelay=28ms
+[2026-11-18T07:02:37.669Z] Idle behavior: wander {"x":29,"y":58,"z":-5}
+[2026-11-18T07:02:51.666Z] Idle behavior: idle
+[2026-11-18T07:02:55.670Z] Idle behavior: wander {"x":40,"y":59,"z":-20}
+[2026-11-18T07:03:09.667Z] Idle behavior: idle
+[2026-11-18T07:03:12.668Z] Idle behavior: wander {"x":43,"y":57,"z":-6}
+[2026-11-18T07:03:25.674Z] Idle behavior: idle
+[2026-11-18T07:03:28.677Z] Idle behavior: wander {"x":42,"y":57,"z":-6}
+[2026-11-18T07:03:34.070Z] Idle behavior: idle
+[2026-11-18T07:03:37.364Z] Connection health: protocol=play lastPacket=48ms lastKeepalive=898ms maxEventLoopDelay=19ms
+[2026-11-18T07:04:37.365Z] Connection health: protocol=play lastPacket=49ms lastKeepalive=499ms maxEventLoopDelay=28ms
+[2026-11-18T07:05:01.773Z] Disconnected: disconnect.quitting
+[2026-11-18T07:05:01.773Z] Connection diagnostics: protocol=play lastPacket=7ms lastKeepalive=157ms maxEventLoopDelay=22ms
+[2026-11-18T07:05:02.032Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T07:05:02.606Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T07:05:03.859Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:05:05.036Z] Idle behavior: wander {"x":43,"y":57,"z":-6}
+[2026-11-18T07:05:05.212Z] Idle behavior: idle
+[2026-11-18T07:06:03.859Z] Connection health: protocol=play lastPacket=43ms lastKeepalive=644ms maxEventLoopDelay=61ms
+[2026-11-18T07:06:45.684Z] Disconnected: disconnect.quitting
+[2026-11-18T07:06:45.684Z] Connection diagnostics: protocol=play lastPacket=18ms lastKeepalive=568ms maxEventLoopDelay=19ms
+[2026-11-18T07:06:45.920Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T07:06:46.470Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T07:06:47.863Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:06:48.926Z] Idle behavior: wander {"x":39,"y":58,"z":-6}
+[2026-11-18T07:06:49.966Z] Idle behavior: idle
+[2026-11-18T07:07:35.922Z] Disconnected: disconnect.quitting
+[2026-11-18T07:07:35.922Z] Connection diagnostics: protocol=play lastPacket=5ms lastKeepalive=305ms maxEventLoopDelay=57ms
+[2026-11-18T07:07:36.161Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T07:07:36.602Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T07:07:37.782Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:07:38.190Z] Idle behavior: wander {"x":29,"y":60,"z":-9}
+[2026-11-18T07:07:38.660Z] Idle behavior: idle
+[2026-11-18T07:07:54.169Z] Idle behavior: wander {"x":38,"y":64,"z":-7}
+[2026-11-18T07:07:55.659Z] Idle behavior: idle
+[2026-11-18T07:07:58.170Z] Idle behavior: wander {"x":37,"y":64,"z":1}
+[2026-11-18T07:08:00.178Z] Idle behavior: idle
+[2026-11-18T07:08:03.172Z] Idle behavior: wander {"x":41,"y":64,"z":0}
+[2026-11-18T07:08:04.799Z] Idle behavior: idle
+[2026-11-18T07:08:08.176Z] Idle behavior: wander {"x":45,"y":64,"z":0}
+[2026-11-18T07:08:09.225Z] Idle behavior: idle
+[2026-11-18T07:08:12.176Z] Idle behavior: wander {"x":42,"y":64,"z":4}
+[2026-11-18T07:08:26.175Z] Idle behavior: idle
+[2026-11-18T07:08:29.180Z] Idle behavior: wander {"x":45,"y":64,"z":0}
+[2026-11-18T07:08:29.939Z] Idle behavior: idle
+[2026-11-18T07:08:33.184Z] Idle behavior: wander {"x":51,"y":64,"z":-1}
+[2026-11-18T07:08:37.783Z] Connection health: protocol=play lastPacket=22ms lastKeepalive=821ms maxEventLoopDelay=53ms
+[2026-11-18T07:08:47.180Z] Idle behavior: idle
+[2026-11-18T07:08:50.184Z] Idle behavior: wander {"x":44,"y":64,"z":5}
+[2026-11-18T07:08:51.763Z] Idle behavior: idle
+[2026-11-18T07:08:55.184Z] Idle behavior: wander {"x":49,"y":64,"z":2}
+[2026-11-18T07:08:56.743Z] Idle behavior: idle
+[2026-11-18T07:09:00.184Z] Idle behavior: wander {"x":41,"y":63,"z":6}
+[2026-11-18T07:09:14.183Z] Idle behavior: idle
+[2026-11-18T07:09:37.783Z] Connection health: protocol=play lastPacket=22ms lastKeepalive=272ms maxEventLoopDelay=35ms
+[2026-11-18T07:10:37.784Z] Connection health: protocol=play lastPacket=21ms lastKeepalive=772ms maxEventLoopDelay=21ms
+[2026-11-18T07:11:37.783Z] Connection health: protocol=play lastPacket=22ms lastKeepalive=171ms maxEventLoopDelay=29ms
+[2026-11-18T07:12:37.783Z] Connection health: protocol=play lastPacket=22ms lastKeepalive=571ms maxEventLoopDelay=19ms
+[2026-11-18T07:13:37.784Z] Connection health: protocol=play lastPacket=22ms lastKeepalive=1022ms maxEventLoopDelay=17ms
+[2026-11-18T07:14:37.784Z] Connection health: protocol=play lastPacket=22ms lastKeepalive=422ms maxEventLoopDelay=21ms
+[2026-11-18T07:14:58.620Z] Disconnected: disconnect.quitting
+[2026-11-18T07:14:58.620Z] Connection diagnostics: protocol=play lastPacket=9ms lastKeepalive=658ms maxEventLoopDelay=20ms
+[2026-11-18T07:14:58.860Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T07:14:59.392Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T07:15:00.656Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:15:00.858Z] Idle behavior: recover
+[2026-11-18T07:16:00.656Z] Connection health: protocol=play lastPacket=41ms lastKeepalive=741ms maxEventLoopDelay=56ms
+[2026-11-18T07:17:00.656Z] Connection health: protocol=play lastPacket=40ms lastKeepalive=340ms maxEventLoopDelay=23ms
+[2026-11-18T07:18:00.656Z] Connection health: protocol=play lastPacket=41ms lastKeepalive=740ms maxEventLoopDelay=19ms
+[2026-11-18T07:18:16.918Z] Idle behavior: idle
+[2026-11-18T07:18:16.998Z] Disconnected: disconnect.quitting
+[2026-11-18T07:18:16.998Z] Connection diagnostics: protocol=play lastPacket=32ms lastKeepalive=533ms maxEventLoopDelay=12ms
+[2026-11-18T07:18:17.261Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T07:18:17.655Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T07:18:18.961Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:18:19.262Z] Idle behavior: seek_food {"x":37,"y":63,"z":6}
+[2026-11-18T07:18:36.262Z] Idle behavior: recover
+[2026-11-18T07:18:37.265Z] Idle behavior: seek_food {"x":47,"y":64,"z":16}
+[2026-11-18T07:19:18.962Z] Connection health: protocol=play lastPacket=46ms lastKeepalive=896ms maxEventLoopDelay=55ms
+[2026-11-18T07:19:20.277Z] Idle behavior: recover
+[2026-11-18T07:19:21.279Z] Idle behavior: seek_food {"x":51,"y":64,"z":8}
+[2026-11-18T07:19:31.280Z] Idle behavior: recover
+[2026-11-18T07:19:32.281Z] Idle behavior: seek_food {"x":55,"y":64,"z":17}
+[2026-11-18T07:19:34.282Z] Idle behavior: recover
+[2026-11-18T07:19:36.282Z] Idle behavior: seek_food {"x":50,"y":64,"z":23}
+[2026-11-18T07:19:38.281Z] Idle behavior: recover
+[2026-11-18T07:19:40.282Z] Idle behavior: seek_food {"x":57,"y":63,"z":28}
+[2026-11-18T07:19:53.283Z] Idle behavior: recover
+[2026-11-18T07:19:54.284Z] Idle behavior: seek_food {"x":38,"y":64,"z":32}
+[2026-11-18T07:20:04.284Z] Idle behavior: recover
+[2026-11-18T07:20:05.285Z] Idle behavior: seek_food {"x":48,"y":64,"z":28}
+[2026-11-18T07:20:15.286Z] Idle behavior: recover
+[2026-11-18T07:20:16.287Z] Idle behavior: seek_food {"x":35,"y":64,"z":23}
+[2026-11-18T07:20:18.962Z] Connection health: protocol=play lastPacket=17ms lastKeepalive=393ms maxEventLoopDelay=22ms
+[2026-11-18T07:20:26.288Z] Idle behavior: recover
+[2026-11-18T07:20:27.288Z] Idle behavior: seek_food {"x":35,"y":63,"z":30}
+[2026-11-18T07:20:51.297Z] Idle behavior: recover
+[2026-11-18T07:20:52.296Z] Idle behavior: seek_food {"x":43,"y":64,"z":11}
+[2026-11-18T07:21:18.961Z] Connection health: protocol=play lastPacket=45ms lastKeepalive=645ms maxEventLoopDelay=27ms
+[2026-11-18T07:22:18.961Z] Connection health: protocol=play lastPacket=45ms lastKeepalive=145ms maxEventLoopDelay=45ms
+[2026-11-18T07:22:20.329Z] Idle behavior: recover
+[2026-11-18T07:22:22.967Z] Damage observed: mob_attack from zombie
+[2026-11-18T07:22:23.467Z] Damage observed: mob_attack from zombie
+[2026-11-18T07:22:24.467Z] Damage observed: mob_attack from zombie
+[2026-11-18T07:22:24.469Z] Idle behavior: idle
+[2026-11-18T07:22:24.567Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:23:08.342Z] Disconnected: disconnect.quitting
+[2026-11-18T07:23:08.343Z] Connection diagnostics: protocol=play lastPacket=27ms lastKeepalive=227ms maxEventLoopDelay=25ms
+[2026-11-18T07:23:08.606Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T07:23:09.034Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T07:23:10.356Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:23:10.637Z] Idle behavior: wander {"x":-6,"y":76,"z":8}
+[2026-11-18T07:23:20.420Z] Idle behavior: idle
+[2026-11-18T07:23:20.420Z] Behavior and control handlers reloaded.
+[2026-11-18T07:23:21.445Z] Idle behavior: wander {"x":0,"y":76,"z":8}
+[2026-11-18T07:23:35.427Z] Idle behavior: idle
+[2026-11-18T07:23:38.430Z] Idle behavior: wander {"x":-11,"y":74,"z":8}
+[2026-11-18T07:23:51.430Z] Idle behavior: idle
+[2026-11-18T07:23:55.433Z] Idle behavior: wander {"x":-3,"y":76,"z":8}
+[2026-11-18T07:24:08.440Z] Idle behavior: idle
+[2026-11-18T07:24:10.357Z] Connection health: protocol=play lastPacket=40ms lastKeepalive=839ms maxEventLoopDelay=63ms
+[2026-11-18T07:24:11.449Z] Idle behavior: wander {"x":-13,"y":74,"z":5}
+[2026-11-18T07:24:25.443Z] Idle behavior: idle
+[2026-11-18T07:24:28.447Z] Idle behavior: wander {"x":0,"y":76,"z":8}
+[2026-11-18T07:24:42.444Z] Idle behavior: idle
+[2026-11-18T07:24:45.448Z] Idle behavior: wander {"x":-12,"y":74,"z":6}
+[2026-11-18T07:24:59.448Z] Idle behavior: idle
+[2026-11-18T07:25:02.452Z] Idle behavior: wander {"x":-14,"y":74,"z":5}
+[2026-11-18T07:25:10.357Z] Connection health: protocol=play lastPacket=41ms lastKeepalive=390ms maxEventLoopDelay=40ms
+[2026-11-18T07:25:15.452Z] Idle behavior: idle
+[2026-11-18T07:25:19.455Z] Idle behavior: wander {"x":0,"y":76,"z":8}
+[2026-11-18T07:25:33.454Z] Idle behavior: idle
+[2026-11-18T07:25:37.462Z] Idle behavior: wander {"x":-10,"y":74,"z":9}
+[2026-11-18T07:25:50.464Z] Idle behavior: idle
+[2026-11-18T07:25:54.468Z] Idle behavior: wander {"x":-6,"y":76,"z":8}
+[2026-11-18T07:26:07.484Z] Idle behavior: idle
+[2026-11-18T07:26:10.357Z] Connection health: protocol=play lastPacket=40ms lastKeepalive=583ms maxEventLoopDelay=34ms
+[2026-11-18T07:26:11.488Z] Idle behavior: wander {"x":-3,"y":76,"z":8}
+[2026-11-18T07:26:25.489Z] Idle behavior: idle
+[2026-11-18T07:26:28.492Z] Idle behavior: wander {"x":-3,"y":76,"z":7}
+[2026-11-18T07:26:41.526Z] Idle behavior: idle
+[2026-11-18T07:26:45.531Z] Idle behavior: wander {"x":-3,"y":76,"z":7}
+[2026-11-18T07:26:58.538Z] Idle behavior: idle
+[2026-11-18T07:27:01.540Z] Idle behavior: wander {"x":-14,"y":75,"z":8}
+[2026-11-18T07:27:10.356Z] Connection health: protocol=play lastPacket=4ms lastKeepalive=889ms maxEventLoopDelay=207ms
+[2026-11-18T07:27:14.543Z] Idle behavior: idle
+[2026-11-18T07:27:17.545Z] Idle behavior: wander {"x":1,"y":75,"z":6}
+[2026-11-18T07:27:30.547Z] Idle behavior: idle
+[2026-11-18T07:27:33.551Z] Idle behavior: wander {"x":1,"y":75,"z":6}
+[2026-11-18T07:27:46.552Z] Idle behavior: idle
+[2026-11-18T07:27:49.555Z] Idle behavior: wander {"x":-9,"y":74,"z":-2}
+[2026-11-18T07:28:03.554Z] Idle behavior: idle
+[2026-11-18T07:28:04.618Z] Damage observed: mob_attack from spider
+[2026-11-18T07:28:05.967Z] Damage observed: mob_attack from spider
+[2026-11-18T07:28:06.559Z] Idle behavior: wander {"x":-13,"y":75,"z":10}
+[2026-11-18T07:28:06.970Z] Damage observed: mob_attack from spider
+[2026-11-18T07:28:08.417Z] Damage observed: mob_attack from spider
+[2026-11-18T07:28:08.556Z] Idle behavior: recover
+[2026-11-18T07:28:08.556Z] Idle behavior: idle
+[2026-11-18T07:28:09.170Z] Damage observed: player_explosion from creeper
+[2026-11-18T07:28:09.173Z] Idle behavior: idle
+[2026-11-18T07:28:09.266Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:28:10.356Z] Connection health: protocol=play lastPacket=34ms lastKeepalive=233ms maxEventLoopDelay=26ms

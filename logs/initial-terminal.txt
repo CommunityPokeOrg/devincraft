@@ -1,0 +1,406 @@
+Wed Nov 18 06:48:54 UTC 2026
+● ermsies-direct.service - Ermsies Mineflayer daemon for Pokecraft
+     Loaded: loaded (/etc/systemd/system/ermsies-direct.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2026-11-18 06:28:41 UTC; 20min ago
+   Main PID: 19607 (bash)
+      Tasks: 12 (limit: 38432)
+     Memory: 167.9M
+        CPU: 21.550s
+     CGroup: /system.slice/ermsies-direct.service
+             ├─19607 /bin/bash /home/ubuntu/repos/minecraft-agent-harness/.agent-state/ermsies-direct/supervise.sh
+             └─19615 node daemon.mjs --auth microsoft
+
+=== Replaced tmux session ===
+no server running on /tmp/tmux-1000/default
+
+=== Daemon log ===
+[2026-11-18T06:00:14.441Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:00:14.961Z] Microsoft device login is awaiting approval.
+[2026-11-18T06:12:25.935Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:15:01.151Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:21:51.567Z] Connection/authentication error: Error
+[2026-11-18T06:22:21.573Z] Disconnected: keepAliveError
+[2026-11-18T06:22:21.573Z] Reconnecting in 5s (attempt 1/8).
+[2026-11-18T06:22:26.574Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:22:27.087Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:22:28.519Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:24:23.900Z] Disconnected: disconnect.quitting
+[2026-11-18T06:24:25.024Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:24:25.616Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:24:26.916Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:26:39.787Z] Disconnected: disconnect.quitting
+[2026-11-18T06:26:40.913Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:26:41.646Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:26:43.014Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:28:40.518Z] Disconnected: disconnect.quitting
+[2026-11-18T06:28:40.519Z] Connection diagnostics: protocol=play lastPacket=2ms lastKeepalive=704ms maxEventLoopDelay=58ms
+[2026-11-18T06:28:41.851Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:28:42.287Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:28:43.604Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:29:43.603Z] Connection health: protocol=play lastPacket=37ms lastKeepalive=37ms maxEventLoopDelay=56ms
+[2026-11-18T06:30:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=438ms maxEventLoopDelay=18ms
+[2026-11-18T06:31:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=688ms maxEventLoopDelay=18ms
+[2026-11-18T06:32:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=988ms maxEventLoopDelay=15ms
+[2026-11-18T06:33:43.604Z] Connection health: protocol=play lastPacket=39ms lastKeepalive=388ms maxEventLoopDelay=31ms
+[2026-11-18T06:34:43.603Z] Connection health: protocol=play lastPacket=37ms lastKeepalive=737ms maxEventLoopDelay=16ms
+[2026-11-18T06:35:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=88ms maxEventLoopDelay=16ms
+[2026-11-18T06:36:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=537ms maxEventLoopDelay=20ms
+[2026-11-18T06:37:43.605Z] Connection health: protocol=play lastPacket=39ms lastKeepalive=739ms maxEventLoopDelay=20ms
+[2026-11-18T06:38:43.604Z] Connection health: protocol=play lastPacket=36ms lastKeepalive=137ms maxEventLoopDelay=14ms
+[2026-11-18T06:42:34.096Z] Connection health: protocol=play lastPacket=174180ms lastKeepalive=175080ms maxEventLoopDelay=174215ms
+[2026-11-18T06:42:34.118Z] Minecraft keepalive: client timed out after 60000 milliseconds; closing the unresponsive socket.
+[2026-11-18T06:42:34.125Z] Disconnected: keepAliveError
+[2026-11-18T06:42:34.125Z] Connection diagnostics: protocol=play lastPacket=174209ms lastKeepalive=175109ms maxEventLoopDelay=0ms
+[2026-11-18T06:42:34.125Z] Reconnecting in 5.763s (attempt 1).
+[2026-11-18T06:42:39.889Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:42:40.644Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:42:42.026Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:43:42.025Z] Connection health: protocol=play lastPacket=9ms lastKeepalive=9ms maxEventLoopDelay=27ms
+[2026-11-18T06:44:42.027Z] Connection health: protocol=play lastPacket=10ms lastKeepalive=509ms maxEventLoopDelay=32ms
+[2026-11-18T06:45:42.026Z] Connection health: protocol=play lastPacket=14ms lastKeepalive=764ms maxEventLoopDelay=19ms
+[2026-11-18T06:46:42.027Z] Connection health: protocol=play lastPacket=10ms lastKeepalive=1010ms maxEventLoopDelay=19ms
+[2026-11-18T06:47:42.026Z] Connection health: protocol=play lastPacket=9ms lastKeepalive=309ms maxEventLoopDelay=29ms
+[2026-11-18T06:48:42.027Z] Connection health: protocol=play lastPacket=26356ms lastKeepalive=27259ms maxEventLoopDelay=13237ms
+
+=== ermsies status ===
+{
+  "state": "spawned",
+  "username": "ermsies",
+  "version": "1.21.1",
+  "gameMode": "survival",
+  "position": {
+    "x": 37.47777435458535,
+    "y": 58,
+    "z": -11.391478485534508
+  },
+  "health": 20,
+  "food": 20,
+  "action": null,
+  "chatHandler": {
+    "received": 0,
+    "ignoredSelf": 0,
+    "addressed": 0,
+    "responded": 0,
+    "queued": 0,
+    "failures": 0
+  },
+  "heldItem": {
+    "name": "crafting_table",
+    "count": 1,
+    "slot": 39
+  },
+  "inventory": [
+    {
+      "name": "stick",
+      "count": 8,
+      "slot": 36
+    },
+    {
+      "name": "mud",
+      "count": 30,
+      "slot": 37
+    },
+    {
+      "name": "mangrove_roots",
+      "count": 3,
+      "slot": 38
+    },
+    {
+      "name": "crafting_table",
+      "count": 1,
+      "slot": 39
+    },
+    {
+      "name": "mangrove_planks",
+      "count": 32,
+      "slot": 40
+    },
+    {
+      "name": "muddy_mangrove_roots",
+      "count": 7,
+      "slot": 41
+    },
+    {
+      "name": "dirt",
+      "count": 1,
+      "slot": 42
+    }
+  ],
+  "players": [],
+  "nearbyEntities": [
+    {
+      "id": 32392,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 29.236969994755103,
+        "y": 57,
+        "z": -9.922172991689312
+      }
+    },
+    {
+      "id": 32394,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 29.584984738009272,
+        "y": 57,
+        "z": -8.25
+      }
+    },
+    {
+      "id": 32401,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 28.670501086299485,
+        "y": 57,
+        "z": -9.207102608463712
+      }
+    },
+    {
+      "id": 32399,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 28.166352629933897,
+        "y": 57,
+        "z": -9.886142450328634
+      }
+    },
+    {
+      "id": 32396,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 28.062424168450846,
+        "y": 57,
+        "z": -9.25
+      }
+    },
+    {
+      "id": 32397,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 28.25,
+        "y": 57,
+        "z": -8.25
+      }
+    },
+    {
+      "id": 32400,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 27.25025827389861,
+        "y": 57,
+        "z": -9.25
+      }
+    },
+    {
+      "id": 32386,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 18.485927519315215,
+        "y": 53.599999994039536,
+        "z": -19.50068288459596
+      }
+    },
+    {
+      "id": 32972,
+      "name": "creeper",
+      "type": "hostile",
+      "position": {
+        "x": 20.17562914080055,
+        "y": 68.875,
+        "z": -20.748472089858154
+      }
+    },
+    {
+      "id": 32388,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 17.288326292225953,
+        "y": 57.24682675457396,
+        "z": -21.419866132620704
+      }
+    },
+    {
+      "id": 32387,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 16.703893193446163,
+        "y": 56.29345703125,
+        "z": -21.312051036634216
+      }
+    },
+    {
+      "id": 32389,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 16.634448614268777,
+        "y": 55.116943359375,
+        "z": -21.33166294834023
+      }
+    },
+    {
+      "id": 32398,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.462428514810362,
+        "y": 57.04736328125,
+        "z": -22.060083445178346
+      }
+    },
+    {
+      "id": 32383,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.25,
+        "y": 52.599999994039536,
+        "z": -20.75
+      }
+    },
+    {
+      "id": 32703,
+      "name": "zombie",
+      "type": "hostile",
+      "position": {
+        "x": 50.202904976566465,
+        "y": 37,
+        "z": -5.546745011084436
+      }
+    },
+    {
+      "id": 32955,
+      "name": "creeper",
+      "type": "hostile",
+      "position": {
+        "x": 34.76193124666609,
+        "y": 64,
+        "z": 13.819446896109984
+      }
+    },
+    {
+      "id": 32815,
+      "name": "skeleton",
+      "type": "hostile",
+      "position": {
+        "x": 28.491819026110356,
+        "y": 63.875,
+        "z": 12.706787878247887
+      }
+    },
+    {
+      "id": 32390,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.671337512095892,
+        "y": 59.599999994039536,
+        "z": -27.122314309172726
+      }
+    },
+    {
+      "id": 32404,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.99699030031076,
+        "y": 58.5997100536927,
+        "z": -27.75
+      }
+    },
+    {
+      "id": 32391,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.909959145999444,
+        "y": 58.011480027354615,
+        "z": -27.721574620671372
+      }
+    },
+    {
+      "id": 32393,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.647529032889178,
+        "y": 57.599999994039536,
+        "z": -27.76938566103498
+      }
+    },
+    {
+      "id": 32384,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.082857191480157,
+        "y": 57.96431568204345,
+        "z": -27.339602998204626
+      }
+    },
+    {
+      "id": 32402,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 14.544319913896238,
+        "y": 58.599999994039536,
+        "z": -27.041058284797035
+      }
+    },
+    {
+      "id": 32385,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.75,
+        "y": 58.38257474077458,
+        "z": -28.75
+      }
+    },
+    {
+      "id": 32382,
+      "name": "frog",
+      "type": "animal",
+      "position": {
+        "x": 23.497933930772295,
+        "y": 74,
+        "z": -30.025575382488665
+      }
+    },
+    {
+      "id": 32405,
+      "name": "frog",
+      "type": "animal",
+      "position": {
+        "x": 16.497561091084506,
+        "y": 73.0625,
+        "z": 2.1382462872593466
+      }
+    }
+  ]
+}
+
+=== Recent chat ===
+[
+  {
+    "at": "2026-11-18T06:28:43.539Z",
+    "position": "system",
+    "message": "vane_admin.chat_message_formatter.player_join"
+  },
+  {
+    "at": "2026-11-18T06:42:41.960Z",
+    "position": "system",
+    "message": "vane_admin.chat_message_formatter.player_join"
+  }
+]

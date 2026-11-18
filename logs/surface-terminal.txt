@@ -1,0 +1,167 @@
+Wed Nov 18 07:09:00 UTC 2026
+MainPID=32423
+ActiveState=active
+SubState=running
+{
+  "state": "spawned",
+  "username": "ermsies",
+  "version": "1.21.1",
+  "gameMode": "survival",
+  "position": {
+    "x": 49.120468481520845,
+    "y": 63.875,
+    "z": 2.5958792837168234
+  },
+  "health": 20,
+  "food": 20,
+  "action": null,
+  "chatHandler": {
+    "received": 0,
+    "ignoredSelf": 0,
+    "addressed": 0,
+    "responded": 0,
+    "queued": 0,
+    "failures": 0
+  },
+  "autonomous": {
+    "enabled": true,
+    "behavior": {
+      "type": "wander",
+      "target": {
+        "x": 41,
+        "y": 63,
+        "z": 6
+      }
+    }
+  },
+  "heldItem": {
+    "name": "mangrove_planks",
+    "count": 26,
+    "slot": 40
+  },
+  "inventory": [
+    {
+      "name": "stick",
+      "count": 8,
+      "slot": 36
+    },
+    {
+      "name": "mud",
+      "count": 30,
+      "slot": 37
+    },
+    {
+      "name": "mangrove_roots",
+      "count": 3,
+      "slot": 38
+    },
+    {
+      "name": "crafting_table",
+      "count": 1,
+      "slot": 39
+    },
+    {
+      "name": "mangrove_planks",
+      "count": 26,
+      "slot": 40
+    },
+    {
+      "name": "muddy_mangrove_roots",
+      "count": 7,
+      "slot": 41
+    },
+    {
+      "name": "dirt",
+      "count": 1,
+      "slot": 42
+    }
+  ],
+  "players": [],
+  "nearbyEntities": [
+    {
+      "id": 34533,
+      "name": "item",
+      "type": "other",
+      "position": {
+        "x": 37.188414833767524,
+        "y": 58,
+        "z": -11.125
+      }
+    },
+    {
+      "id": 34746,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 58.292724609375,
+        "y": 62.00341796875,
+        "z": 24.698974609375
+      }
+    },
+    {
+      "id": 34765,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 59.52392578125,
+        "y": 61.94677734375,
+        "z": 25.317138671875
+      }
+    },
+    {
+      "id": 34764,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 60.383544921875,
+        "y": 61.082275390625,
+        "z": 25.946533203125
+      }
+    },
+    {
+      "id": 34723,
+      "name": "creeper",
+      "type": "hostile",
+      "position": {
+        "x": 30.470542814508477,
+        "y": 63.875,
+        "z": 23.17974912965697
+      }
+    },
+    {
+      "id": 34792,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 68.55810546875,
+        "y": 53.90234375,
+        "z": 20.5673828125
+      }
+    }
+  ]
+}
+0      72     172.16.255.2:39030 15.204.152.101:28556 users:(("MainThread",pid=32427,fd=24))
+[2026-11-18T07:07:36.602Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T07:07:37.782Z] Spawned as ermsies in survival mode.
+[2026-11-18T07:07:38.190Z] Idle behavior: wander {"x":29,"y":60,"z":-9}
+[2026-11-18T07:07:38.660Z] Idle behavior: idle
+[2026-11-18T07:07:54.169Z] Idle behavior: wander {"x":38,"y":64,"z":-7}
+[2026-11-18T07:07:55.659Z] Idle behavior: idle
+[2026-11-18T07:07:58.170Z] Idle behavior: wander {"x":37,"y":64,"z":1}
+[2026-11-18T07:08:00.178Z] Idle behavior: idle
+[2026-11-18T07:08:03.172Z] Idle behavior: wander {"x":41,"y":64,"z":0}
+[2026-11-18T07:08:04.799Z] Idle behavior: idle
+[2026-11-18T07:08:08.176Z] Idle behavior: wander {"x":45,"y":64,"z":0}
+[2026-11-18T07:08:09.225Z] Idle behavior: idle
+[2026-11-18T07:08:12.176Z] Idle behavior: wander {"x":42,"y":64,"z":4}
+[2026-11-18T07:08:26.175Z] Idle behavior: idle
+[2026-11-18T07:08:29.180Z] Idle behavior: wander {"x":45,"y":64,"z":0}
+[2026-11-18T07:08:29.939Z] Idle behavior: idle
+[2026-11-18T07:08:33.184Z] Idle behavior: wander {"x":51,"y":64,"z":-1}
+[2026-11-18T07:08:37.783Z] Connection health: protocol=play lastPacket=22ms lastKeepalive=821ms maxEventLoopDelay=53ms
+[2026-11-18T07:08:47.180Z] Idle behavior: idle
+[2026-11-18T07:08:50.184Z] Idle behavior: wander {"x":44,"y":64,"z":5}
+[2026-11-18T07:08:51.763Z] Idle behavior: idle
+[2026-11-18T07:08:55.184Z] Idle behavior: wander {"x":49,"y":64,"z":2}
+[2026-11-18T07:08:56.743Z] Idle behavior: idle
+[2026-11-18T07:09:00.184Z] Idle behavior: wander {"x":41,"y":63,"z":6}

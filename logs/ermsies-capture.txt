@@ -1,0 +1,376 @@
+Wed Nov 18 06:42:58 UTC 2026
+== ermsies status
+{
+  "state": "spawned",
+  "username": "ermsies",
+  "version": "1.21.1",
+  "gameMode": "survival",
+  "position": {
+    "x": 37.47777435458535,
+    "y": 58,
+    "z": -11.391478485534508
+  },
+  "health": 20,
+  "food": 20,
+  "action": null,
+  "chatHandler": {
+    "received": 0,
+    "ignoredSelf": 0,
+    "addressed": 0,
+    "responded": 0,
+    "queued": 0,
+    "failures": 0
+  },
+  "heldItem": {
+    "name": "crafting_table",
+    "count": 1,
+    "slot": 39
+  },
+  "inventory": [
+    {
+      "name": "stick",
+      "count": 8,
+      "slot": 36
+    },
+    {
+      "name": "mud",
+      "count": 30,
+      "slot": 37
+    },
+    {
+      "name": "mangrove_roots",
+      "count": 3,
+      "slot": 38
+    },
+    {
+      "name": "crafting_table",
+      "count": 1,
+      "slot": 39
+    },
+    {
+      "name": "mangrove_planks",
+      "count": 32,
+      "slot": 40
+    },
+    {
+      "name": "muddy_mangrove_roots",
+      "count": 7,
+      "slot": 41
+    },
+    {
+      "name": "dirt",
+      "count": 1,
+      "slot": 42
+    }
+  ],
+  "players": [],
+  "nearbyEntities": [
+    {
+      "id": 32412,
+      "name": "spider",
+      "type": "hostile",
+      "position": {
+        "x": 42.97806366269246,
+        "y": 65.86653319001198,
+        "z": -7.706077521168325
+      }
+    },
+    {
+      "id": 32388,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 25.703505336019163,
+        "y": 58.52607412649504,
+        "z": -12.512093504286792
+      }
+    },
+    {
+      "id": 32400,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 23.18564802082646,
+        "y": 58,
+        "z": -14.525666732629627
+      }
+    },
+    {
+      "id": 32392,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 22.293393662452072,
+        "y": 58,
+        "z": -13.167720343681836
+      }
+    },
+    {
+      "id": 32399,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 22.449858705017988,
+        "y": 58,
+        "z": -15.311493148565226
+      }
+    },
+    {
+      "id": 32397,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 21.436080089007188,
+        "y": 58,
+        "z": -14.88591202530832
+      }
+    },
+    {
+      "id": 32398,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 21.548338874487584,
+        "y": 58.735137179455435,
+        "z": -15.357691113373356
+      }
+    },
+    {
+      "id": 32396,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 21.183443680279414,
+        "y": 58,
+        "z": -13.793609010655052
+      }
+    },
+    {
+      "id": 32386,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 22.126925525348064,
+        "y": 54.000040867538054,
+        "z": -16.872589535377454
+      }
+    },
+    {
+      "id": 32401,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 20.858579410786348,
+        "y": 59.032258342211534,
+        "z": -15.147551398247392
+      }
+    },
+    {
+      "id": 32394,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 20.25008025804966,
+        "y": 58.65234375,
+        "z": -14.065930640475193
+      }
+    },
+    {
+      "id": 32387,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 20.210283705363963,
+        "y": 58,
+        "z": -14.881570031816587
+      }
+    },
+    {
+      "id": 32404,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 17.087773872349622,
+        "y": 57.030517578125,
+        "z": -18.832349930440046
+      }
+    },
+    {
+      "id": 32402,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 16.249996334534316,
+        "y": 56.60493864832417,
+        "z": -18.17265462349004
+      }
+    },
+    {
+      "id": 32384,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 16.382443195302763,
+        "y": 57.247314453125,
+        "z": -18.861111402827394
+      }
+    },
+    {
+      "id": 32385,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 16.476840633351493,
+        "y": 57.2998046875,
+        "z": -19.72163307621038
+      }
+    },
+    {
+      "id": 32393,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.919164481635448,
+        "y": 57.907958984375,
+        "z": -18.921419387240643
+      }
+    },
+    {
+      "id": 32391,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.681069821980476,
+        "y": 56.898097421194535,
+        "z": -19.149566537841178
+      }
+    },
+    {
+      "id": 32390,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.47893500201582,
+        "y": 57.53901414949796,
+        "z": -19.476967956110098
+      }
+    },
+    {
+      "id": 32383,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 15.55160346243078,
+        "y": 53.03444711569588,
+        "z": -19.29549493850096
+      }
+    },
+    {
+      "id": 32484,
+      "name": "spider",
+      "type": "hostile",
+      "position": {
+        "x": 17.69999998807907,
+        "y": 71.93986562728882,
+        "z": -14.581071682627833
+      }
+    },
+    {
+      "id": 32493,
+      "name": "spider",
+      "type": "hostile",
+      "position": {
+        "x": 53.114856334809964,
+        "y": 64,
+        "z": -31.120305532294893
+      }
+    },
+    {
+      "id": 32382,
+      "name": "frog",
+      "type": "animal",
+      "position": {
+        "x": 23.498515993940185,
+        "y": 74,
+        "z": -30.02522800626972
+      }
+    },
+    {
+      "id": 32405,
+      "name": "frog",
+      "type": "animal",
+      "position": {
+        "x": 16.495640722070878,
+        "y": 73.0625,
+        "z": 1.0408097772574405
+      }
+    },
+    {
+      "id": 32389,
+      "name": "tropical_fish",
+      "type": "water_creature",
+      "position": {
+        "x": 13.5533102085768,
+        "y": 54.798095703125,
+        "z": -27.44561139240282
+      }
+    }
+  ]
+}
+== chat
+[
+  {
+    "at": "2026-11-18T06:28:43.539Z",
+    "position": "system",
+    "message": "vane_admin.chat_message_formatter.player_join"
+  },
+  {
+    "at": "2026-11-18T06:42:41.960Z",
+    "position": "system",
+    "message": "vane_admin.chat_message_formatter.player_join"
+  }
+]
+== daemon.log
+[2026-11-18T06:00:14.441Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:00:14.961Z] Microsoft device login is awaiting approval.
+[2026-11-18T06:12:25.935Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:15:01.151Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:21:51.567Z] Connection/authentication error: Error
+[2026-11-18T06:22:21.573Z] Disconnected: keepAliveError
+[2026-11-18T06:22:21.573Z] Reconnecting in 5s (attempt 1/8).
+[2026-11-18T06:22:26.574Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:22:27.087Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:22:28.519Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:24:23.900Z] Disconnected: disconnect.quitting
+[2026-11-18T06:24:25.024Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:24:25.616Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:24:26.916Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:26:39.787Z] Disconnected: disconnect.quitting
+[2026-11-18T06:26:40.913Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:26:41.646Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:26:43.014Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:28:40.518Z] Disconnected: disconnect.quitting
+[2026-11-18T06:28:40.519Z] Connection diagnostics: protocol=play lastPacket=2ms lastKeepalive=704ms maxEventLoopDelay=58ms
+[2026-11-18T06:28:41.851Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:28:42.287Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:28:43.604Z] Spawned as ermsies in survival mode.
+[2026-11-18T06:29:43.603Z] Connection health: protocol=play lastPacket=37ms lastKeepalive=37ms maxEventLoopDelay=56ms
+[2026-11-18T06:30:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=438ms maxEventLoopDelay=18ms
+[2026-11-18T06:31:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=688ms maxEventLoopDelay=18ms
+[2026-11-18T06:32:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=988ms maxEventLoopDelay=15ms
+[2026-11-18T06:33:43.604Z] Connection health: protocol=play lastPacket=39ms lastKeepalive=388ms maxEventLoopDelay=31ms
+[2026-11-18T06:34:43.603Z] Connection health: protocol=play lastPacket=37ms lastKeepalive=737ms maxEventLoopDelay=16ms
+[2026-11-18T06:35:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=88ms maxEventLoopDelay=16ms
+[2026-11-18T06:36:43.604Z] Connection health: protocol=play lastPacket=38ms lastKeepalive=537ms maxEventLoopDelay=20ms
+[2026-11-18T06:37:43.605Z] Connection health: protocol=play lastPacket=39ms lastKeepalive=739ms maxEventLoopDelay=20ms
+[2026-11-18T06:38:43.604Z] Connection health: protocol=play lastPacket=36ms lastKeepalive=137ms maxEventLoopDelay=14ms
+[2026-11-18T06:42:34.096Z] Connection health: protocol=play lastPacket=174180ms lastKeepalive=175080ms maxEventLoopDelay=174215ms
+[2026-11-18T06:42:34.118Z] Minecraft keepalive: client timed out after 60000 milliseconds; closing the unresponsive socket.
+[2026-11-18T06:42:34.125Z] Disconnected: keepAliveError
+[2026-11-18T06:42:34.125Z] Connection diagnostics: protocol=play lastPacket=174209ms lastKeepalive=175109ms maxEventLoopDelay=0ms
+[2026-11-18T06:42:34.125Z] Reconnecting in 5.763s (attempt 1).
+[2026-11-18T06:42:39.889Z] Starting ermsies (microsoft) for 15.204.152.101:28556, Minecraft 1.21.1
+[2026-11-18T06:42:40.644Z] Microsoft authorization returned the ermsies profile; connecting to Pokecraft.
+[2026-11-18T06:42:42.026Z] Spawned as ermsies in survival mode.
+== journalctl
+Nov 18 06:28:41 devin-box systemd[1]: Started Ermsies Mineflayer daemon for Pokecraft.
