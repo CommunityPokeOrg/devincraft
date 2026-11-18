@@ -1,0 +1,9 @@
+[Unit]
+Description=Render the view of the Devincraft bot every ten minutes
+
+[Timer]
+OnActiveSec=10min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target

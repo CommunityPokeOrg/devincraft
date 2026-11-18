@@ -1,7 +1,7 @@
 const { Session } = require('node:inspector/promises');
 const { startControl } = require('./control.cjs');
 
-const bridge = Symbol.for('ermsies-direct.attach');
+const bridge = Symbol.for('devincraft-bot.attach');
 if (globalThis[bridge]) throw new Error('The control socket is already installed.');
 const session = new Session();
 session.connect();
@@ -14,7 +14,7 @@ async function getBot() {
     try {
         const { result: shutdown } = await session.post('Runtime.evaluate', {
             expression: "process.listeners('SIGTERM').find(listener => listener.name === 'shutdown')",
-            objectGroup: 'ermsies-bot',
+            objectGroup: 'devincraft-bot',
         });
         if (!shutdown.objectId) return undefined;
         const scopes = (await properties(shutdown.objectId)).internalProperties.find(property => property.name === '[[Scopes]]')?.value;
@@ -25,14 +25,14 @@ async function getBot() {
         if (bot?.objectId) {
             const call = await session.post('Runtime.callFunctionOn', {
                 objectId: bot.objectId,
-                functionDeclaration: "function () { globalThis[Symbol.for('ermsies-direct.attach')](this); }",
+                functionDeclaration: "function () { globalThis[Symbol.for('devincraft-bot.attach')](this); }",
             });
             if (call.exceptionDetails) throw new Error('Could not obtain the live Minecraft bot.');
         }
         return current;
     } finally {
         current = undefined;
-        await session.post('Runtime.releaseObjectGroup', { objectGroup: 'ermsies-bot' });
+        await session.post('Runtime.releaseObjectGroup', { objectGroup: 'devincraft-bot' });
     }
 }
 

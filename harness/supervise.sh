@@ -4,7 +4,7 @@ umask 077
 cd -- "$(dirname -- "$0")" || exit 1
 exec 9>> supervisor.lock
 if ! flock -n 9; then
-    printf 'An ermsies supervisor already holds the lock.\n' >&2
+    printf 'A bot supervisor already holds the lock.\n' >&2
     exit 78
 fi
 

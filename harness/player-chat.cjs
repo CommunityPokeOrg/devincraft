@@ -31,12 +31,13 @@ function createInbox(path) {
 function attachPlayerChat(bot, { isReady, execute, inbox, metrics, now = Date.now }) {
     const cooldownMs = 4000;
     const replies = new Map();
-    const name = bot.username ?? bot._client?.authflow?.username ?? 'ermsies';
-    const address = new RegExp(`(?<![a-z0-9_])@?${name}(?![a-z0-9_])`, 'i');
     let detached = false;
 
     async function receive(sender, message, whisper) {
         if (detached || !isReady() || typeof sender !== 'string' || !/^[a-z0-9_]{1,16}$/i.test(sender)) return;
+        const name = bot.username ?? process.env.BOT_USERNAME;
+        if (!/^[a-z0-9_]{1,16}$/i.test(name ?? '')) return;
+        const address = new RegExp(`(?<![a-z0-9_])@?${name}(?![a-z0-9_])`, 'i');
         if (sender.toLowerCase() === name.toLowerCase()) {
             metrics.received++;
             metrics.ignoredSelf++;
@@ -51,7 +52,7 @@ function attachPlayerChat(bot, { isReady, execute, inbox, metrics, now = Date.no
         let response;
         let command;
         if (/^(hi|hey|hello|hiya|good morning|good evening)( there)?$/.test(text)) response = `Hi, ${sender}!`;
-        else if (/^(help|commands|what can you do)$/.test(text)) response = 'Try: ermsies status, where are you, follow me, or stop.';
+        else if (/^(help|commands|what can you do)$/.test(text)) response = 'Try: status, where are you, follow me, or stop. Mention me in public chat.';
         else if (/^(where are you|where|coords|position|status)$/.test(text)) {
             const { x, y, z } = bot.entity.position;
             response = `I'm at ${Math.floor(x)}, ${Math.floor(y)}, ${Math.floor(z)} with ${bot.health}/20 health and ${bot.food}/20 food.`;
@@ -60,7 +61,7 @@ function attachPlayerChat(bot, { isReady, execute, inbox, metrics, now = Date.no
         else {
             await inbox.add({ at: new Date(at).toISOString(), from: sender, whisper, message: message.slice(0, 256) });
             metrics.queued++;
-            response = 'I put that in my inbox. Say ermsies help for commands I can answer right now.';
+            response = 'I put that in my inbox. Ask me for help to see the commands I can answer.';
         }
 
         if (detached || !isReady()) return;

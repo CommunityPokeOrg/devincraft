@@ -1,0 +1,13 @@
+[Unit]
+Description=Render a local screenshot of the Devincraft bot
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/repos/devincraft
+Environment=PATH=/home/ubuntu/.nvm/versions/node/v24.19.0/bin:/home/ubuntu/.local/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=-/etc/devincraft-screenshot.env
+ExecStart=/usr/bin/time -f "wall=%%es user_cpu=%%Us system_cpu=%%Ss cpu=%%P" /bin/bash /home/ubuntu/repos/devincraft/harness/screenshot-latest.sh
+CPUQuota=200%
+TimeoutStartSec=65s
+UMask=0077

@@ -2,17 +2,17 @@ const { once } = require('node:events');
 const { setTimeout } = require('node:timers/promises');
 
 async function sendScene(bot, status, response, connected) {
-    if (response.req.headers.accept === 'application/vnd.ermsies.statusloop+json') {
-        const mode = response.req.headers['x-ermsies-statusloop'];
-        const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    if (response.req.headers.accept === 'application/vnd.devincraft.statusloop+json') {
+        const mode = response.req.headers['x-devincraft-statusloop'];
+        const goal = bot[Symbol.for('devincraft.diamond.goal')];
         const valid = mode === 'on' || mode === 'off';
         const result = valid && goal?.setStatusLoop(mode === 'on');
         response.writeHead(result ? 200 : valid ? 409 : 400, { 'content-type': 'application/json', 'cache-control': 'no-store' });
         response.end(JSON.stringify(result ? { result } : { error: valid ? 'Status loop unavailable; reload behavior first.' : 'Use statusloop on or statusloop off.' }) + '\n');
         return;
     }
-    if (response.req.headers.accept === 'application/vnd.ermsies.goal+json') {
-        const result = bot[Symbol.for('ermsies.diamond.goal')]?.status();
+    if (response.req.headers.accept === 'application/vnd.devincraft.goal+json') {
+        const result = bot[Symbol.for('devincraft.diamond.goal')]?.status();
         response.writeHead(result ? 200 : 409, { 'content-type': 'application/json' });
         response.end(JSON.stringify(result ? { result } : { error: 'Goal unavailable; reload behavior first.' }) + '\n');
         return;

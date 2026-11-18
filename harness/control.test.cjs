@@ -37,7 +37,7 @@ test('private socket handles readiness, gameplay controls, and reconnect state',
     const effects = [];
     const effect = name => (...args) => effects.push([name, ...args]);
     bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', version: '1.21.1', registry: createRegistry('1.21.1'),
+        username: 'devincraftbot', version: '1.21.1', registry: createRegistry('1.21.1'),
         game: { gameMode: 'survival', dimension: 'overworld' }, entity, entities: { 3: entity, 4: player },
         world: { getColumn: () => assert.fail('Status must not stream chunks') },
         health: 18, food: 20, inventory: { items: () => [item] }, heldItem: item,
@@ -170,7 +170,7 @@ test('idle harvest accepts natural-looking trunks but not nearby construction or
 
 test('an active idle goal is cancelled immediately when preempted', { timeout: 5000 }, async t => {
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', game: { gameMode: 'survival' }, health: 20, food: 20,
+        username: 'devincraftbot', game: { gameMode: 'survival' }, health: 20, food: 20,
         entity: { position: new Vec3(0, 64, 0) }, players: {},
         blockAt: ({ y }) => y < 64 ? { name: 'stone', boundingBox: 'block' } : { name: 'air', boundingBox: 'empty' },
         pathfinder: { setGoal: goal => bot.emit('testGoal', goal) },
@@ -193,7 +193,7 @@ test('an active idle goal is cancelled immediately when preempted', { timeout: 5
 test('idle recovery eats safe inventory food before trying to walk', { timeout: 5000 }, async t => {
     const items = [{ name: 'pufferfish' }, { name: 'cooked_beef' }];
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', game: { gameMode: 'survival' }, health: 9, food: 17,
+        username: 'devincraftbot', game: { gameMode: 'survival' }, health: 9, food: 17,
         entity: { position: new Vec3(0, 64, 0) }, registry: createRegistry('1.21.1'),
         inventory: { items: () => items },
         async equip(item) { this.heldItem = item; },
@@ -655,7 +655,7 @@ test('the first iron ingot goes to a shield and the shield goes in the offhand',
         greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].station('crafting_table', table);
+    bot[Symbol.for('devincraft.diamond.goal')].station('crafting_table', table);
     await once(bot, 'equippedShield');
     assert.equal(slots[45].name, 'shield');
     assert.ok(!items.some(item => item.name === 'iron_ingot'));
@@ -715,7 +715,7 @@ test('bed setup waits for daylight and safe sheep before replacing a missing bed
         },
         async sleep(block) {
             assert.ok(placed && block.position.equals(foot));
-            assert.equal(bot[Symbol.for('ermsies.diamond.goal')].bed().spawnSet, false);
+            assert.equal(bot[Symbol.for('devincraft.diamond.goal')].bed().spawnSet, false);
             slept = this.isSleeping = true;
         },
         pathfinder: { movements: {}, setGoal(goal) {
@@ -732,7 +732,7 @@ test('bed setup waits for daylight and safe sheep before replacing a missing bed
         log(line) { if (line.startsWith('Bed spawn set at ')) bot.emit('bedSpawn'); },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.station('crafting_table', table);
     goal.setBed({ name: 'white_bed', foot: { ...foot }, head: { ...head }, stand: { ...origin },
         dimension: 'overworld', spawnSet: true });
@@ -778,7 +778,7 @@ test('three matching wool and planks prioritize a bed over an otherwise craftabl
         isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].station('crafting_table', table);
+    bot[Symbol.for('devincraft.diamond.goal')].station('crafting_table', table);
     assert.equal((await once(bot, 'crafted'))[0], registry.itemsByName.white_bed.id);
 });
 
@@ -829,7 +829,7 @@ for (const timedOut of [false, true]) test(timedOut
         },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.station('crafting_table', table);
     goal.setSpawnRelocation({ origin: { ...origin }, base: { ...origin },
         bedSearchStartedAt: timedOut ? Date.now() - 10 * 60_000 : undefined });
@@ -881,7 +881,7 @@ test('the first respawn returns to the saved base before looking for food or gea
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned', foodSearches); },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.setSpawnRelocation({ origin: { ...start }, base: { ...base }, heading: [1,0] });
     const returned = once(bot, 'returned');
     bot.emit('death');
@@ -940,7 +940,7 @@ for (const [scenario, support, below, waterlogged] of [
             log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
         });
         t.after(() => behavior.close());
-        const goal = bot[Symbol.for('ermsies.diamond.goal')];
+        const goal = bot[Symbol.for('devincraft.diamond.goal')];
         goal.setSpawnRelocation({ origin: { ...start }, base: { ...base }, escape: { origin: { ...start }, destination: { ...base } } });
         if (scenario === 'one-block landings') {
             await once(bot, 'returned');
@@ -1000,7 +1000,7 @@ for (const rise of [0,1]) test(`saved-base escape clears a leaf obstruction and 
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.setSpawnRelocation({ origin: { ...start }, base: { ...base }, escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'returned');
     assert.deepEqual(digs, [head, trunk, log]);
@@ -1038,7 +1038,7 @@ test('saved-base escape uses a supported lower ledge when there is no canopy dig
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.setSpawnRelocation({ origin: { ...start }, base: { ...base }, escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'returned');
     assert.deepEqual(moves, [landing, base]);
@@ -1079,7 +1079,7 @@ test('saved-base escape takes a lower canopy ledge that opens a safe dig column'
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setSpawnRelocation({ origin: { ...start }, base: { ...base },
+    bot[Symbol.for('devincraft.diamond.goal')].setSpawnRelocation({ origin: { ...start }, base: { ...base },
         escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'returned');
     assert.equal(dug, true);
@@ -1116,7 +1116,7 @@ test('saved-base return clears a dry rise after a stalled jump', { timeout: 6500
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setSpawnRelocation({ origin: { ...start }, base: { ...base },
+    bot[Symbol.for('devincraft.diamond.goal')].setSpawnRelocation({ origin: { ...start }, base: { ...base },
         escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'returned');
     assert.equal(cleared, true);
@@ -1155,7 +1155,7 @@ test('saved-base return carves one jumpable step out of a dry mud pocket', { tim
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setSpawnRelocation({ origin: { ...start }, base: { ...base },
+    bot[Symbol.for('devincraft.diamond.goal')].setSpawnRelocation({ origin: { ...start }, base: { ...base },
         escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'returned');
     assert.equal(dug, true);
@@ -1195,7 +1195,7 @@ test('saved-base escape clears leaves and dry roots blocking consecutive ground 
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setSpawnRelocation({ origin: { ...start }, base: { ...base },
+    bot[Symbol.for('devincraft.diamond.goal')].setSpawnRelocation({ origin: { ...start }, base: { ...base },
         escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'returned');
     assert.deepEqual(cuts, obstacles);
@@ -1232,7 +1232,7 @@ test('saved-base escape walks down dry mangrove root ledges without digging them
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.setSpawnRelocation({ origin: { ...start }, base: { ...base }, escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'returned');
     assert.deepEqual(landings, route.slice(1));
@@ -1286,7 +1286,7 @@ test('saved-base descent waits and places dirt cover above a hostile landing, th
         },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.setSpawnRelocation({ origin: { ...start }, base: { ...base }, escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'sealed');
     assert.deepEqual(placed, [wall]);
@@ -1347,7 +1347,7 @@ for (const partial of [false, true]) test(`a persistent hostile landing is bypas
         },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.setSpawnRelocation({ origin: { ...start }, base: { ...base }, escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'holding');
     assert.deepEqual(bot.entity.position.floored(), start);
@@ -1384,7 +1384,7 @@ test('saved-base return follows a longer dry detour when the base is close but t
         log(line) { if (line.startsWith('Returned to saved jungle base')) bot.emit('returned'); },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.setSpawnRelocation({ origin: { ...start }, base: { ...base }, escape: { origin: { ...start }, destination: { ...base } } });
     await once(bot, 'returned');
     assert.deepEqual(steps, route.slice(1));
@@ -1423,7 +1423,7 @@ test('two early deaths trigger a consistent ground-only route around leaves to a
         log(line) { if (line.startsWith('Dry surface base selected')) bot.emit('base'); },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     const selected = once(bot, 'base');
     const trigger = setInterval(() => {
         if (killed || !goal.spawnRelocation()) return;
@@ -1459,7 +1459,7 @@ test('spawn relocation never advances more than 150 blocks from its starting poi
         isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     const origin = { x: 0, y: 64, z: 0 };
     goal.setSpawnRelocation({ origin, escape: { origin, heading: [1,0] } });
     await new Promise(resolve => setTimeout(resolve, 1700));
@@ -1491,7 +1491,7 @@ test('three distinct early path stalls near spawn activate relocation without a 
     t.after(() => behavior.close());
     await once(bot, 'relocating');
     assert.equal(stalls, 3);
-    assert.equal(bot[Symbol.for('ermsies.diamond.goal')].status().deaths, 0);
+    assert.equal(bot[Symbol.for('devincraft.diamond.goal')].status().deaths, 0);
 });
 
 test('a stalled mangrove log pickup walks directly across a clear floor', { timeout: 7500 }, async t => {
@@ -1595,7 +1595,7 @@ for (const situation of ['safe drop', 'missing', 'cliff drop']) {
                 greetings: { last: 0, players: new Map() },
             });
             t.after(() => behavior.close());
-            bot[Symbol.for('ermsies.diamond.goal')].station('crafting_table', drop.position.floored());
+            bot[Symbol.for('devincraft.diamond.goal')].station('crafting_table', drop.position.floored());
             await once(bot, 'hasTable');
             assert.ok(items.some(item => item.name === 'crafting_table'));
         });
@@ -1635,6 +1635,32 @@ test('bootstrap ascends for a table with only one plank and no stone pickaxe', {
 
 test('wood resupply detours around a blocked ascent without revisiting its last cell', { timeout: 5000 }, async t => {
     await assertBootstrapAscent(t, [], true);
+});
+
+test('wood restock switches steps when pathfinder reports a pillar reached from one block below', { timeout: 5000 }, async t => {
+    const origin = new Vec3(0,64,0);
+    const bot = Object.assign(new EventEmitter(), {
+        game: { gameMode: 'survival' }, entity: { position: origin.offset(0.5,0,0.5), onGround: true },
+        health: 20, food: 20, players: {}, inventory: { items: () => [{ name: 'dirt', count: 16 }] },
+        registry: createRegistry('1.21.1'), recipesFor: () => [], findBlocks: () => [],
+        blockAt(point) {
+            const name = point.y < 64 || point.y >= 70 ? 'stone' : 'air';
+            return { name, position: point, boundingBox: name === 'air' ? 'empty' : 'block' };
+        },
+        clearControlStates() {},
+        pathfinder: { movements: {}, setGoal(goal) { if (goal) bot.emit('ascent', goal); } },
+    });
+    const behavior = attachIdle(bot, {
+        isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {},
+        greetings: { last: 0, players: new Map() },
+    });
+    t.after(() => behavior.close());
+    const [pillar] = await once(bot, 'ascent');
+    assert.deepEqual([pillar.x, pillar.y, pillar.z], [0,65,0]);
+    bot.emit('goal_reached', pillar);
+    const [detour] = await once(bot, 'ascent');
+    assert.equal(behavior.status().type, 'walk_level_step');
+    assert.deepEqual([detour.x, detour.y, detour.z], [1,64,0]);
 });
 
 for (const falling of [false, true]) {
@@ -1797,7 +1823,7 @@ test('an unarmed bot crafts a wooden sword at a local table before reaching a si
         greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].station('crafting_table', table.position);
+    bot[Symbol.for('devincraft.diamond.goal')].station('crafting_table', table.position);
     await once(bot, 'crafted');
 });
 
@@ -1906,7 +1932,7 @@ test('stone bootstrap leaves the roots for a dry staircase entrance rather than 
     const drySite = origin.offset(4,-2,0);
     const items = ['wooden_pickaxe', 'wooden_sword', 'crafting_table', 'mangrove_log'].map(name => ({ name, count: 1 }));
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 20, entity: { position: origin.offset(0.5,0,0.5), onGround: true }, players: {}, entities: {},
         recipesFor: () => [], inventory: { items: () => items }, findBlocks: () => [],
         blockAt(position) {
@@ -1934,7 +1960,7 @@ test('stone bootstrap descends a continuous vine column when the canopy has no s
     const items = ['wooden_pickaxe', 'wooden_sword', 'crafting_table', 'jungle_log'].map(name => ({ name, count: 1 }));
     let aim;
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 20, entity: { position: origin.offset(0.5,0,0.5), onGround: true }, players: {}, entities: {},
         recipesFor: () => [], inventory: { items: () => items }, findBlocks: () => [],
         blockAt(position) {
@@ -2118,7 +2144,7 @@ test('iron staircase tunnels five dry blocks at level before descending again, w
     const dug = new Set(), walked = [];
     let aim;
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 20, entity: { position: origin.offset(0.5,0,0.5), onGround: true }, players: {}, entities: {},
         recipesFor: () => [], inventory: { items: () => items }, findBlocks: () => [],
         blockAt(position) {
@@ -2284,7 +2310,7 @@ async function staircaseFood(t, hunger, haveFood, stockUp = false) {
     let table, packed = false;
     const drop = { position: start.offset(-0.5,0,0.5), getDroppedItem: () => ({ name: 'cobblestone' }) };
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: hunger, entity: { position: start.offset(0.5,0,0.5), onGround: true }, players: {}, entities: {},
         recipesFor: id => stockUp ? [{ name: bot.registry.items[id].name }] : [], inventory: { items: () => items },
         blockAt(position) {
@@ -2445,7 +2471,7 @@ test('with three iron ingots and too little wood, autonomy returns to the known 
         { name: 'cobblestone', count: 5 }, { name: 'diorite', count: 1 },
     ];
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 20, entity: { position: pos }, players: {}, entities: {},
         recipesFor: () => [], inventory: { items: () => items }, blockAt: point => point.equals(station) ? table : { name: 'air' },
         world: { raycast: () => table },
@@ -2455,7 +2481,7 @@ test('with three iron ingots and too little wood, autonomy returns to the known 
         isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].station('crafting_table', station);
+    bot[Symbol.for('devincraft.diamond.goal')].station('crafting_table', station);
     const [goal] = await once(bot, 'testGoal');
     assert.equal(behavior.status().type, 'walk_to_table');
     assert.equal(bot.pathfinder.movements.canDig, true);
@@ -2470,7 +2496,7 @@ test('with three iron ingots and too little wood, autonomy returns to the known 
     bot.emit('goal_reached');
     await once(bot, 'testGoal');
     assert.equal(behavior.status().type, 'walk_to_table');
-    assert.equal(bot[Symbol.for('ermsies.diamond.goal')].status().stage, 2);
+    assert.equal(bot[Symbol.for('devincraft.diamond.goal')].status().stage, 2);
 });
 
 test('when a workstation route stalls with no pickaxe, clear a dry pillar and keep approaching at station height', { timeout: 17_000 }, async t => {
@@ -2486,7 +2512,7 @@ test('when a workstation route stalls with no pickaxe, clear a dry pillar and ke
     const items = ['stone_sword', 'furnace', 'jungle_planks', 'apple'].map(name => ({ name, count: 1 }));
     items.push({ name: 'iron_ingot', count: 3 }, { name: 'cobblestone', count: 4 }, { name: 'stick', count: 4 });
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 20, entity: { position }, players: {}, entities: {},
         recipesFor: () => [], inventory: { items: () => items },
         blockAt: point => {
@@ -2510,7 +2536,7 @@ test('when a workstation route stalls with no pickaxe, clear a dry pillar and ke
         isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    const diamond = bot[Symbol.for('ermsies.diamond.goal')];
+    const diamond = bot[Symbol.for('devincraft.diamond.goal')];
     diamond.woodStocked(true);
     diamond.station('crafting_table', station);
     const [goal] = await once(bot, 'pillar');
@@ -2541,7 +2567,7 @@ test('restocking routes to elevated logs instead of stopping at ground level und
     const dropSpot = swampFloor.offset(1, 3, 0);
     const drop = { position: dropSpot.offset(0.4, 0.1, 0.4), getDroppedItem: () => ({ name: 'mangrove_log' }) };
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 20, entity: { position: swampFloor.offset(0, 0.875, 0) }, players: {}, entities: {},
         recipesFor: () => [], inventory: { items: () => [{ name: 'dirt', count: 4 }] },
         blockAt: point => {
@@ -2558,7 +2584,7 @@ test('restocking routes to elevated logs instead of stopping at ground level und
         isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setTableRecovery({ phase: 'restock' });
+    bot[Symbol.for('devincraft.diamond.goal')].setTableRecovery({ phase: 'restock' });
     const [dropRoute] = await once(bot, 'dropRoute');
     assert.equal(dropRoute.isEnd(swampFloor.offset(0, 1, 0)), false);
     assert.equal(dropRoute.isEnd(dropSpot), true);
@@ -2587,7 +2613,7 @@ test('forest search excavates a local ascent when it cannot find a route', { tim
         greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setTableRecovery({
+    bot[Symbol.for('devincraft.diamond.goal')].setTableRecovery({
         phase: 'restock', forest: { origin: { x: 0, y: 55, z: 0 }, walked: 0 },
     });
     assert.deepEqual((await once(bot, 'localAscent'))[0], obstruction);
@@ -2598,7 +2624,7 @@ test('forest search replans and changes jump destination despite moderate hunger
     const hostile = { id: 1, name: 'zombie', type: 'hostile', position: position.offset(2, 4, 0) };
     const lines = [];
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 17, entity: { position, onGround: true }, players: {}, entities: { 1: hostile },
         recipesFor: () => [], inventory: { items: () => [] },
         blockAt: point => point.y < 64 ? { name: 'grass_block', boundingBox: 'block' } : { name: 'air' },
@@ -2618,7 +2644,7 @@ test('forest search replans and changes jump destination despite moderate hunger
         greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    const diamond = bot[Symbol.for('ermsies.diamond.goal')];
+    const diamond = bot[Symbol.for('devincraft.diamond.goal')];
     diamond.setTableRecovery({ phase: 'restock', forest: { origin: { x: 0, y: 64, z: 0 }, walked: 0 } });
     const [first] = await once(bot, 'forestGoal');
     assert.equal(behavior.status().type, 'seek_forest');
@@ -2662,7 +2688,7 @@ test('a stalled tree approach tries a short step toward the trunk before picking
         greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setTableRecovery({ phase: 'restock', forest: { origin, walked: 0 } });
+    bot[Symbol.for('devincraft.diamond.goal')].setTableRecovery({ phase: 'restock', forest: { origin, walked: 0 } });
     await once(bot, 'forestJump');
     assert.deepEqual(behavior.status(), { type: 'hop_forest', target: { x: 1, y: 64, z: 0 } });
 });
@@ -2713,7 +2739,7 @@ test('repeated forest route stalls clear a dry local ascent and jump out of a pi
         greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setTableRecovery({ phase: 'restock', forest: { origin, walked: 0 } });
+    bot[Symbol.for('devincraft.diamond.goal')].setTableRecovery({ phase: 'restock', forest: { origin, walked: 0 } });
     const [point] = await once(bot, 'cleared');
     assert.equal(point.y, origin.y + 1);
     assert.equal(Math.abs(point.x) + Math.abs(point.z), 1);
@@ -2772,7 +2798,7 @@ test('after two failed escape attempts a forest pillar preserves the reserve and
         greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    bot[Symbol.for('ermsies.diamond.goal')].setTableRecovery({ phase: 'restock', forest: { origin, walked: 0 } });
+    bot[Symbol.for('devincraft.diamond.goal')].setTableRecovery({ phase: 'restock', forest: { origin, walked: 0 } });
     await once(bot, 'escaped');
     assert.deepEqual(placed, [origin, origin.offset(0,1,0), origin.offset(0,2,0)]);
     assert.equal(dirt.count, 16);
@@ -2839,7 +2865,7 @@ for (const variant of ['roots', 'water base', 'dry slot', 'a recoverable canopy 
             isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
         });
         t.after(() => behavior.close());
-        bot[Symbol.for('ermsies.diamond.goal')].woodStocked(true);
+        bot[Symbol.for('devincraft.diamond.goal')].woodStocked(true);
         await once(bot, 'crafted');
         const above = floor.offset(0,1,0).toString();
         if (canopy) {
@@ -2871,7 +2897,7 @@ test('restock crafts an iron pickaxe first at hunger 14 and packs the table from
     };
     let table;
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry, game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry, game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 14, entity: { position, onGround: true }, players: {}, entities: {},
         inventory: { items: () => items },
         blockAt: point => point.equals(table ?? new Vec3(0,0,0)) && table
@@ -2909,7 +2935,7 @@ test('restock crafts an iron pickaxe first at hunger 14 and packs the table from
         isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    const diamond = bot[Symbol.for('ermsies.diamond.goal')];
+    const diamond = bot[Symbol.for('devincraft.diamond.goal')];
     diamond.setTableRecovery({ phase: 'restock' });
     await once(bot, 'packed');
     assert.deepEqual(crafted, ['mangrove_planks', 'crafting_table', 'iron_pickaxe']);
@@ -2925,7 +2951,7 @@ test('diamond progression packs both stations and crafts spare sticks before des
     items.push({ name: 'oak_planks', count: 3 });
     items.push({ name: 'jungle_log', count: 2 });
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 20, entity: { position }, players: {}, entities: {}, inventory: { items: () => items },
         recipesFor: id => [{ id }], craft: async recipe => { bot.emit('crafted', recipe.id); },
         blockAt: () => ({ name: 'air' }), pathfinder: { setGoal: goal => { if (goal) assert.fail('Descended without spare sticks'); } },
@@ -2998,7 +3024,7 @@ async function checkIronSearchAscent(t, y, deep, restocking = false) {
     else items.push({ name: 'stick', count: 2 }, { name: 'oak_planks', count: 8 });
     if (deep) items.push({ name: 'diamond', count: 5 });
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 10, entity: { position }, players: {}, entities: {},
         inventory: { items: () => items }, recipesFor: () => [], findBlocks: () => [],
         blockAt(point) {
@@ -3015,7 +3041,7 @@ async function checkIronSearchAscent(t, y, deep, restocking = false) {
         isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
     });
     t.after(() => behavior.close());
-    if (deep) bot[Symbol.for('ermsies.diamond.goal')].advance({ heading: 0, spine: 12 });
+    if (deep) bot[Symbol.for('devincraft.diamond.goal')].advance({ heading: 0, spine: 12 });
     assert.deepEqual(await once(bot, 'dug'), [position.offset(0,2,0)]);
 }
 
@@ -3054,7 +3080,7 @@ for (const unstable of [false, true]) {
                 isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
             });
             t.after(() => behavior.close());
-            bot[Symbol.for('ermsies.diamond.goal')].recordStair(back, start);
+            bot[Symbol.for('devincraft.diamond.goal')].recordStair(back, start);
             const [goal] = await once(bot, 'stepGoal');
             assert.ok(goal.isEnd(unstable ? east : back));
         });
@@ -3152,7 +3178,7 @@ for (const [fuel, fuelCount, oreCount, expectedFuel] of [['coal', 1, 3, 1], ['oa
             isIdle: () => true, isEnabled: () => true, setWalking() {}, log() {}, greetings: { last: 0, players: new Map() },
         });
         t.after(() => behavior.close());
-        bot[Symbol.for('ermsies.diamond.goal')].station('furnace', furnace.position);
+        bot[Symbol.for('devincraft.diamond.goal')].station('furnace', furnace.position);
         assert.deepEqual(await once(bot, 'loaded'), ['raw_iron', oreCount]);
         assert.deepEqual(loaded, { name: fuel, count: expectedFuel });
     });
@@ -3162,7 +3188,7 @@ test('stage six reserves three sticks for both diamond tools before crafting eit
     const items = ['iron_pickaxe', 'stone_sword', 'furnace', 'crafting_table'].map(name => ({ name, count: 1 }));
     items.push({ name: 'stick', count: 2 }, { name: 'oak_planks', count: 2 }, { name: 'diamond', count: 29 });
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 11, entity: { position: new Vec3(0,-58,0) }, players: {}, entities: {},
         inventory: { items: () => items }, recipesFor: id => [{ id }],
         craft: async recipe => { bot.emit('crafted', recipe.id); },
@@ -3184,7 +3210,7 @@ test('autonomy equips the full crafted diamond armor and counts worn pieces in t
     const destination = { head: 5, torso: 6, legs: 7, feet: 8 };
     let reported;
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), game: { gameMode: 'survival', dimension: 'overworld' },
         health: 20, food: 11, entity: { position: new Vec3(0,-58,0) }, players: {}, entities: {},
         getEquipmentDestSlot: slot => destination[slot],
         inventory: { items: () => items, slots }, recipesFor: () => [],
@@ -3192,7 +3218,7 @@ test('autonomy equips the full crafted diamond armor and counts worn pieces in t
             slots[destination[slot]] = item;
             items.splice(items.indexOf(item), 1);
             if (slot === 'feet') {
-                reported = bot[Symbol.for('ermsies.diamond.goal')].snapshot();
+                reported = bot[Symbol.for('devincraft.diamond.goal')].snapshot();
                 bot.emit('armorEquipped');
             }
         },
@@ -3261,7 +3287,7 @@ test('post-diamond autonomy completes and lights a dry portal, then enters with 
         feet: 'diamond_boots', 'off-hand': 'shield' })) slots[destination[slot]] = items.find(item => item.name === name);
     let reference, jumping = false;
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', registry: createRegistry('1.21.1'), entity: { position: base.offset(0.5,0,0.5), onGround: true },
+        username: 'devincraftbot', registry: createRegistry('1.21.1'), entity: { position: base.offset(0.5,0,0.5), onGround: true },
         game: { gameMode: 'survival', dimension: 'overworld' }, time: { timeOfDay: 6000 },
         health: 20, food: 20, players: {}, entities: {}, inventory: { items: () => items, slots },
         blockAt(point) {
@@ -3304,7 +3330,7 @@ test('post-diamond autonomy completes and lights a dry portal, then enters with 
         log(line) { if (line.startsWith('Nether portal lit')) bot.emit('portalLit'); },
     });
     t.after(() => behavior.close());
-    const goal = bot[Symbol.for('ermsies.diamond.goal')];
+    const goal = bot[Symbol.for('devincraft.diamond.goal')];
     goal.setSpawnRelocation({ origin: { ...base }, base: { ...base } });
     await once(bot, 'portalLit');
     assert.equal(goal.snapshot().netherite.portalReady, true);
@@ -3387,7 +3413,7 @@ test('status chat waits three minutes, ignores unchanged idle state, and respect
     now += 179_999; tick();
     assert.equal(lines.length, 0);
     now++; tick();
-    assert.deepEqual(lines, ['[ermsies] (-2, 72, 5) | health 20/20, food 18/20 | stone_pickaxe | task: stage 2, mine gear']);
+    assert.deepEqual(lines, ['[bot] (-2, 72, 5) | health 20/20, food 18/20 | stone_pickaxe | task: stage 2, mine gear']);
     tick = setup();
     state.active = true;
     now += 179_999; tick();
@@ -3548,7 +3574,7 @@ test('addressed player chat responds privately to whispers, ignores itself, and 
     let now = 0;
     let ready = true;
     const bot = Object.assign(new EventEmitter(), {
-        username: 'ermsies', players: { neighbor: {} },
+        username: 'devincraftbot', players: { neighbor: {} },
         entity: { position: new Vec3(3.2, 61, -1.2) }, health: 19, food: 16,
         chat(message) { this.emit('reply', { message }); },
         whisper(to, message) { this.emit('reply', { to, message }); },
@@ -3560,12 +3586,12 @@ test('addressed player chat responds privately to whispers, ignores itself, and 
     });
     const responses = [];
     bot.on('reply', response => responses.push(response));
-    bot.emit('chat', 'ermsies', 'ermsies come');
-    bot.emit('whisper', 'Ermsies', 'where are you');
+    bot.emit('chat', 'devincraftbot', 'devincraftbot come');
+    bot.emit('whisper', 'DevincraftBot', 'where are you');
     bot.emit('chat', 'neighbor', 'hello');
-    bot.emit('chat', 'other', 'hello ermsies');
+    bot.emit('chat', 'other', 'hello devincraftbot');
     assert.deepEqual(responses, []);
-    bot.emit('chat', 'neighbor', 'Hello @ermsies!');
+    bot.emit('chat', 'neighbor', 'Hello @devincraftbot!');
     bot.emit('whisper', 'neighbor', 'status');
     assert.deepEqual(responses, [{ message: 'neighbor: Hi, neighbor!' }]);
 
@@ -3574,7 +3600,7 @@ test('addressed player chat responds privately to whispers, ignores itself, and 
     assert.deepEqual(responses.at(-1), { to: 'neighbor', message: "I'm at 3, 61, -2 with 19/20 health and 16/20 food." });
     now = 10000;
     const moved = once(bot, 'reply');
-    bot.emit('chat', 'neighbor', 'ermsies follow me');
+    bot.emit('chat', 'neighbor', 'devincraftbot follow me');
     await moved;
     assert.deepEqual(commands, [['follow', 'neighbor']]);
     const queued = once(bot, 'reply');

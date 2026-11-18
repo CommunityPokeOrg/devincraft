@@ -9,7 +9,7 @@ const types = {
 const coords = { x: types.integer, y: types.integer, z: types.integer };
 const definitions = [
     ['status', 'Get bot state, position, health, inventory, and nearby entities.', {}],
-    ['goal', 'Get the six-stage diamond goal, missing gear, diamond counts, and deaths.', {}],
+    ['goal', 'Get the gear progression, missing gear, diamond counts, and deaths.', {}],
     ['say', 'Send one ordinary chat message, not a server command.', { message: types.string }],
     ['whisper', 'Send a private in-game message.', { player: types.string, message: types.string }],
     ['chat', 'Read recent Minecraft chat.', { limit: { type: 'integer', minimum: 1, maximum: 100 } }, []],
@@ -45,7 +45,7 @@ async function handle(line) {
     if (method === 'initialize') return reply({
         protocolVersion: allowedProtocols.has(params?.protocolVersion) ? params.protocolVersion : '2025-06-18',
         capabilities: { tools: {} },
-        serverInfo: { name: 'ermsies-direct', version: '1.0.0' },
+        serverInfo: { name: 'devincraft-bot', version: '1.0.0' },
     });
     if (method === 'ping') return reply({});
     if (method === 'tools/list') return reply({ tools });

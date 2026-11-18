@@ -31,7 +31,7 @@ function createStatusTicker({ read, checkpoint, record, send, enabled = () => tr
             Math.floor(state.health / 2), Math.floor(state.food / 2), items, state.stage, task]);
         if (last?.signature === signature && !state.active) return;
         record({ at: time, signature });
-        send(`[ermsies] (${[x,y,z].map(Math.floor).join(', ')}) | health ${Math.ceil(state.health)}/20, food ${state.food}/20 | ${items} | task: stage ${state.stage}, ${task}`);
+        send(`[bot] (${[x,y,z].map(Math.floor).join(', ')}) | health ${Math.ceil(state.health)}/20, food ${state.food}/20 | ${items} | task: stage ${state.stage}, ${task}`);
     };
 }
 

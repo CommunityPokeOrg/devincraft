@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 const Vec3 = require('vec3');
 
-const goalKey = Symbol.for('ermsies.diamond.goal');
+const goalKey = Symbol.for('devincraft.diamond.goal');
 const urgentHunger = 6;
 const stages = ['survive', 'stock_and_build', 'get_iron', 'smelt_and_equip', 'find_diamonds', 'craft_diamond_set'];
 const diamondKit = { diamond_pickaxe: 3, diamond_sword: 2, diamond_helmet: 5, diamond_chestplate: 8, diamond_leggings: 7, diamond_boots: 4 };
@@ -27,7 +27,7 @@ const ironOre = /^(?:deepslate_)?iron_ore$/;
 const coalOre = /^(?:deepslate_)?coal_ore$/;
 const diamonds = /^(?:deepslate_)?diamond_ore$/;
 const storePath = path.join(__dirname, 'diamond-progress.json');
-const stores = globalThis[Symbol.for('ermsies.diamond.stores')] ??= new Map();
+const stores = globalThis[Symbol.for('devincraft.diamond.stores')] ??= new Map();
 
 function progressStore(file, log) {
     const current = { peakStage: 1, deaths: 0, diamondHighWater: 0, route: null, last: null, stations: {}, smelting: null };

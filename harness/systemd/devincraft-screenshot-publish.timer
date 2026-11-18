@@ -1,0 +1,9 @@
+[Unit]
+Description=Publish the bot screenshot no more than once an hour
+
+[Timer]
+OnActiveSec=1h
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target

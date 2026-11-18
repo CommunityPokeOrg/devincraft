@@ -3,7 +3,7 @@ const { call } = require('./client.cjs');
 
 const [command = 'status', ...args] = process.argv.slice(2);
 if (command === '--help' || command === 'help') {
-    console.log(`Usage: ermsies <command>
+    console.log(`Usage: devincraft <command>
   status                       Player, inventory, and nearby entities
   goal                         Diamond progression, needs, counts, and deaths
   say "message"                Send one line of normal chat
@@ -25,7 +25,7 @@ if (command === '--help' || command === 'help') {
   stop                         Stop movement and digging`);
 } else {
     call(command, args).then(result => console.log(JSON.stringify(result, null, 2)), error => {
-        console.error(`ermsies: ${error.message}`);
+        console.error(`devincraft: ${error.message}`);
         process.exitCode = 1;
     });
 }

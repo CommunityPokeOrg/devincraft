@@ -1,0 +1,13 @@
+[Unit]
+Description=Publish the latest Devincraft bot screenshot
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/repos/devincraft
+EnvironmentFile=-/etc/devincraft-screenshot.env
+ExecStart=/bin/bash /home/ubuntu/repos/devincraft/harness/screenshot-publish.sh
+TimeoutStartSec=2min
+UMask=0077

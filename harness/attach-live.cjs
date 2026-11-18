@@ -1,13 +1,16 @@
-const { readFileSync } = require('node:fs');
-const { join } = require('node:path');
+const { readFileSync, readlinkSync } = require('node:fs');
+const { join, resolve } = require('node:path');
 const { setTimeout: delay } = require('node:timers/promises');
+const { pathToFileURL } = require('node:url');
 
 async function main() {
     const [, , pid, mode = 'attach'] = process.argv;
     if (!['attach', 'diagnose', 'repair', 'stabilize'].includes(mode)) throw new Error('Use attach, diagnose, repair, or stabilize.');
-    if (!/^\d+$/.test(pid ?? '') || !readFileSync(`/proc/${pid}/cmdline`, 'utf8').split('\0').includes('.agent-state/ermsies-direct/daemon.mjs')) {
-        throw new Error('Pass the PID of the existing ermsies daemon.');
-    }
+    const expected = join(__dirname, 'daemon.mjs');
+    if (!/^\d+$/.test(pid ?? '')) throw new Error('Pass the PID of the existing bot daemon.');
+    const [, script] = readFileSync(`/proc/${pid}/cmdline`, 'utf8').split('\0');
+    if (!script || resolve(readlinkSync(`/proc/${pid}/cwd`), script) !== expected)
+        throw new Error('Pass the PID of the existing bot daemon.');
     const endpoint = 'http://127.0.0.1:9229/json/list';
     const discover = () => fetch(endpoint, { signal: AbortSignal.timeout(500) });
     const existing = await discover().catch(() => null);
@@ -23,8 +26,8 @@ async function main() {
         await delay(100);
     }
     const [target] = targets ?? [];
-    if (targets?.length !== 1 || !target.url.endsWith('/.agent-state/ermsies-direct/daemon.mjs'))
-        throw new Error('The newly opened inspector does not identify the ermsies daemon.');
+    if (targets?.length !== 1 || target.url !== pathToFileURL(expected).href)
+        throw new Error('The newly opened inspector does not identify the bot daemon.');
     const url = new URL(target.webSocketDebuggerUrl);
     if (url.protocol !== 'ws:' || url.hostname !== '127.0.0.1' || url.port !== '9229')
         throw new Error('Unexpected inspector endpoint.');

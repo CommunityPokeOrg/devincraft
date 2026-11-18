@@ -3777,7 +3777,10 @@ function attachIdle(bot, { isIdle, isEnabled, setWalking, log, greetings }) {
         }
         if (workstationRoute.test(job?.type) || workstationStep.test(job?.type)) {
             fallbackAscent = workstationStep.test(job.type);
-            diamond.blocked();
+            if (fallbackAscent && !groundCell().equals(job.target)) {
+                missedAscent.set(job.target.toString(), performance.now() + 45_000);
+                diamond.blocked(`Ascent stalled at ${groundCell()}; trying a different staircase step`);
+            } else diamond.blocked();
             cancel();
         }
         if (job?.type === 'wander' || job?.type === 'collect') cancel(2500);

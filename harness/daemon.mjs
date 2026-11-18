@@ -14,10 +14,11 @@ import { acknowledgeResourcePack } from './resource-pack.cjs';
 import { retryDelayMs, STABLE_MS } from './reconnect.cjs';
 
 const { values } = parseArgs({ options: { auth: { type: 'string' } } });
-if (values.auth !== 'microsoft') throw new Error('Use --auth microsoft for ermsies.');
+if (values.auth !== 'microsoft') throw new Error('Use --auth microsoft for the bot.');
 process.umask(0o077);
 
-const name = 'ermsies';
+const name = process.env.BOT_USERNAME;
+if (!/^[a-z0-9_]{1,16}$/i.test(name ?? '')) throw new Error('Set BOT_USERNAME to the Minecraft profile name.');
 const host = '15.204.152.101';
 const port = 28556;
 const version = '1.21.1';
@@ -42,7 +43,7 @@ function hasSupervisorLockDescriptor() {
 }
 
 if (!hasSupervisorLockDescriptor()) {
-    console.error('Start ermsies with supervise.sh so it holds the single-instance lock.');
+    console.error('Start the bot with supervise.sh so it holds the single-instance lock.');
     process.exit(78);
 }
 
@@ -115,13 +116,13 @@ function start() {
         },
         connect(client) {
             if (stopping || bot !== current) return;
-            if (client.username.toLowerCase() !== name) {
+            if (client.username.toLowerCase() !== name.toLowerCase()) {
                 log(`Microsoft authorization selected a different Minecraft profile. Not connecting as that account.`);
                 shutdown();
                 process.exitCode = 78;
                 return;
             }
-            log('Microsoft authorization returned the ermsies profile; connecting to Pokecraft.');
+            log('Microsoft authorization returned the configured profile; connecting to Pokecraft.');
             const socket = tcpConnect(port, host);
             socket.setKeepAlive(true, 15_000);
             eventLoopDelay = monitorEventLoopDelay();

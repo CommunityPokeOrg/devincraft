@@ -6,7 +6,7 @@ module.exports = async function diagnose(mode) {
     const session = new Session();
     session.connect();
     const get = async id => session.post('Runtime.getProperties', { objectId: id, ownProperties: true });
-    const bridge = Symbol.for('ermsies-direct.diagnose');
+    const bridge = Symbol.for('devincraft-bot.diagnose');
     let bot;
     let packs;
     globalThis[bridge] = received => { bot = received; };
@@ -17,7 +17,7 @@ module.exports = async function diagnose(mode) {
         const value = (await get(scope.objectId)).result.find(x => x.name === 'bot').value;
         if (value.objectId) await session.post('Runtime.callFunctionOn', {
             objectId: value.objectId,
-            functionDeclaration: "function(){globalThis[Symbol.for('ermsies-direct.diagnose')](this)}",
+            functionDeclaration: "function(){globalThis[Symbol.for('devincraft-bot.diagnose')](this)}",
         });
         const packFunction = (await get(value.objectId)).result.find(x => x.name === 'acceptResourcePack').value;
         const packScopes = (await get(packFunction.objectId)).internalProperties.find(x => x.name === '[[Scopes]]').value;

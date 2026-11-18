@@ -8,13 +8,13 @@ async function call(command, args, socketPath = path.join(__dirname, 'control.so
     }
     if (command === 'goal') {
         if (args.length) throw new Error('Wrong argument count for goal.');
-        const result = await requestJson(socketPath, 'application/vnd.ermsies.goal+json');
+        const result = await requestJson(socketPath, 'application/vnd.devincraft.goal+json');
         if (!result) throw new Error('Goal unavailable; the bot may be disconnected or capturing a scene.');
         return result;
     }
     if (command === 'statusloop') {
         if (args.length !== 1 || !['on', 'off'].includes(args[0])) throw new Error('Use statusloop on or statusloop off.');
-        const result = await requestJson(socketPath, 'application/vnd.ermsies.statusloop+json', null, { 'x-ermsies-statusloop': args[0] });
+        const result = await requestJson(socketPath, 'application/vnd.devincraft.statusloop+json', null, { 'x-devincraft-statusloop': args[0] });
         if (!result) throw new Error('Status loop unavailable; the bot may be disconnected or capturing a scene.');
         return result;
     }
