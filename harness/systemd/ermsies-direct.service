@@ -1,0 +1,26 @@
+[Unit]
+Description=Ermsies Mineflayer daemon for Pokecraft
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/repos/minecraft-agent-harness
+Environment=PATH=/home/ubuntu/.nvm/versions/node/v24.19.0/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/bin/bash /home/ubuntu/repos/minecraft-agent-harness/.agent-state/ermsies-direct/supervise.sh
+Restart=on-failure
+RestartPreventExitStatus=78
+RestartSec=15s
+KillMode=mixed
+TimeoutStopSec=40s
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/ubuntu/repos/minecraft-agent-harness/.agent-state/ermsies-direct
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
