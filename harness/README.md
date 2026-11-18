@@ -70,6 +70,6 @@ The capture timer runs every ten minutes. Successful renders replace
 `screenshots/latest.png` and keep the latest five images locally in
 `$HOME/devincraft-shots` (overridable with `BOT_SHOTS_DIR`). The separate
 publication timer commits only that file, only when it changed, and at most
-once an hour. It requires an authenticated, up-to-date checkout of `main`
+every 30 minutes, and only when the image changed. It requires an authenticated, up-to-date checkout of `main`
 with a Git author configured. Both timers use `/etc/devincraft-screenshot.env`
 if it exists. Neither timer starts or restarts the bot.

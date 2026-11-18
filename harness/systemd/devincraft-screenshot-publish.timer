@@ -1,9 +1,9 @@
 [Unit]
-Description=Publish the bot screenshot no more than once an hour
+Description=Publish the bot screenshot at most every 30 minutes when it changed
 
 [Timer]
-OnActiveSec=1h
-OnUnitActiveSec=1h
+OnActiveSec=2min
+OnUnitActiveSec=30min
 
 [Install]
 WantedBy=timers.target
